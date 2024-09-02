@@ -33,17 +33,17 @@ Namespace WS_GUA_Auditoria
         Inherits System.Web.Services.Protocols.SoapHttpClientProtocol
         
         Private Auditoria_AcompanhamentoOperationCompleted As System.Threading.SendOrPostCallback
-
+        
         Private AuditoriaOperationCompleted As System.Threading.SendOrPostCallback
-
+        
         Private Auditoria_ContestacaoOperationCompleted As System.Threading.SendOrPostCallback
-
+        
         Private useDefaultCredentialsSetExplicitly As Boolean
         
         '''<remarks/>
         Public Sub New()
             MyBase.New
-            Me.Url = Global.IControlIT.My.MySettings.Default.IControlIT_WS_GUA_Auditoria_WSAuditoria
+            Me.Url = Global.IControlIT.My.MySettings.Default.Ativvus_WS_GUA_Auditoria_WSAuditoria
             If (Me.IsLocalFileSystemWebService(Me.Url) = true) Then
                 Me.UseDefaultCredentials = true
                 Me.useDefaultCredentialsSetExplicitly = false
@@ -78,14 +78,13 @@ Namespace WS_GUA_Auditoria
         
         '''<remarks/>
         Public Event Auditoria_AcompanhamentoCompleted As Auditoria_AcompanhamentoCompletedEventHandler
-
+        
         '''<remarks/>
         Public Event AuditoriaCompleted As AuditoriaCompletedEventHandler
-
+        
         '''<remarks/>
         Public Event Auditoria_ContestacaoCompleted As Auditoria_ContestacaoCompletedEventHandler
-
-
+        
         '''<remarks/>
         <System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/Auditoria_Acompanhamento", RequestNamespace:="http://tempuri.org/", ResponseNamespace:="http://tempuri.org/", Use:=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle:=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)>  _
         Public Function Auditoria_Acompanhamento(ByVal pPConn_Banco As String, ByVal pId_Auditoria_Acompanhamento As Integer, ByVal pId_Auditoria_Lote As Integer, ByVal pId_Auditoria_Conta As Integer, ByVal pId_Auditoria_Status As Integer, ByVal pDescricao As String, ByVal pData_Prevista As Date, ByVal pValor_Previsto As Double, ByVal pId_Usuario_Permissao As Integer, ByVal pPakage As String, ByVal pRetorno As Boolean) As System.Data.DataSet
@@ -132,41 +131,41 @@ Namespace WS_GUA_Auditoria
             End If
             Me.InvokeAsync("Auditoria", New Object() {pPConn_Banco, pId_Auditoria_Lote, pId_Auditoria_Conta, pDt_Lote, pId_Conglomerado, pId_Usuario_Permissao, pPakage, pRetorno}, Me.AuditoriaOperationCompleted, userState)
         End Sub
-
+        
         Private Sub OnAuditoriaOperationCompleted(ByVal arg As Object)
             If (Not (Me.AuditoriaCompletedEvent) Is Nothing) Then
-                Dim invokeArgs As System.Web.Services.Protocols.InvokeCompletedEventArgs = CType(arg, System.Web.Services.Protocols.InvokeCompletedEventArgs)
+                Dim invokeArgs As System.Web.Services.Protocols.InvokeCompletedEventArgs = CType(arg,System.Web.Services.Protocols.InvokeCompletedEventArgs)
                 RaiseEvent AuditoriaCompleted(Me, New AuditoriaCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState))
             End If
         End Sub
-
+        
         '''<remarks/>
-        <System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/Auditoria_Contestacao", RequestNamespace:="http://tempuri.org/", ResponseNamespace:="http://tempuri.org/", Use:=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle:=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)>
-        Public Function Auditoria_Contestacao(ByVal pPConn_Banco As String, ByVal pId_Auditoria_Contestacao As Integer, ByVal pId_Fatura As Integer, ByVal pDescricao As String, ByVal pDt_Lote As String, ByVal pId_Fatura_Parametro As String, ByVal pPakage As String, ByVal pRetorno As Boolean) As System.Data.DataSet
-            Dim results() As Object = Me.Invoke("Auditoria_Contestacao", New Object() {pPConn_Banco, pId_Auditoria_Contestacao, pId_Fatura, pDescricao, pDt_Lote, pId_Fatura_Parametro, pPakage, pRetorno})
-            Return CType(results(0), System.Data.DataSet)
+        <System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/Auditoria_Contestacao", RequestNamespace:="http://tempuri.org/", ResponseNamespace:="http://tempuri.org/", Use:=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle:=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)>  _
+        Public Function Auditoria_Contestacao(ByVal pPConn_Banco As String, ByVal pId_Fatura As Integer, ByVal pId_Auditoria_Contestacao As Integer, ByVal pDescricao As String, ByVal pDt_Lote As String, ByVal pId_Fatura_Parametro As Integer, ByVal pPakage As String, ByVal pRetorno As Boolean) As System.Data.DataSet
+            Dim results() As Object = Me.Invoke("Auditoria_Contestacao", New Object() {pPConn_Banco, pId_Fatura, pId_Auditoria_Contestacao, pDescricao, pDt_Lote, pId_Fatura_Parametro, pPakage, pRetorno})
+            Return CType(results(0),System.Data.DataSet)
         End Function
-
+        
         '''<remarks/>
-        Public Overloads Sub Auditoria_ContestacaoAsync(ByVal pPConn_Banco As String, ByVal pId_Auditoria_Contestacao As Integer, ByVal pId_Fatura As Integer, ByVal pDescricao As String, ByVal pDt_Lote As String, ByVal pId_Fatura_Parametro As String, ByVal pPakage As String, ByVal pRetorno As Boolean)
-            Me.Auditoria_ContestacaoAsync(pPConn_Banco, pId_Auditoria_Contestacao, pId_Fatura, pDescricao, pDt_Lote, pId_Fatura_Parametro, pPakage, pRetorno, Nothing)
+        Public Overloads Sub Auditoria_ContestacaoAsync(ByVal pPConn_Banco As String, ByVal pId_Fatura As Integer, ByVal pId_Auditoria_Contestacao As Integer, ByVal pDescricao As String, ByVal pDt_Lote As String, ByVal pId_Fatura_Parametro As Integer, ByVal pPakage As String, ByVal pRetorno As Boolean)
+            Me.Auditoria_ContestacaoAsync(pPConn_Banco, pId_Fatura, pId_Auditoria_Contestacao, pDescricao, pDt_Lote, pId_Fatura_Parametro, pPakage, pRetorno, Nothing)
         End Sub
-
+        
         '''<remarks/>
-        Public Overloads Sub Auditoria_ContestacaoAsync(ByVal pPConn_Banco As String, ByVal pId_Auditoria_Contestacao As Integer, ByVal pId_Fatura As Integer, ByVal pDescricao As String, ByVal pDt_Lote As String, ByVal pId_Fatura_Parametro As String, ByVal pPakage As String, ByVal pRetorno As Boolean, ByVal userState As Object)
+        Public Overloads Sub Auditoria_ContestacaoAsync(ByVal pPConn_Banco As String, ByVal pId_Fatura As Integer, ByVal pId_Auditoria_Contestacao As Integer, ByVal pDescricao As String, ByVal pDt_Lote As String, ByVal pId_Fatura_Parametro As Integer, ByVal pPakage As String, ByVal pRetorno As Boolean, ByVal userState As Object)
             If (Me.Auditoria_ContestacaoOperationCompleted Is Nothing) Then
                 Me.Auditoria_ContestacaoOperationCompleted = AddressOf Me.OnAuditoria_ContestacaoOperationCompleted
             End If
-            Me.InvokeAsync("Auditoria_Contestacao", New Object() {pPConn_Banco, pId_Auditoria_Contestacao, pId_Fatura, pDescricao, pDt_Lote, pId_Fatura_Parametro, pPakage, pRetorno}, Me.Auditoria_ContestacaoOperationCompleted, userState)
+            Me.InvokeAsync("Auditoria_Contestacao", New Object() {pPConn_Banco, pId_Fatura, pId_Auditoria_Contestacao, pDescricao, pDt_Lote, pId_Fatura_Parametro, pPakage, pRetorno}, Me.Auditoria_ContestacaoOperationCompleted, userState)
         End Sub
-
+        
         Private Sub OnAuditoria_ContestacaoOperationCompleted(ByVal arg As Object)
             If (Not (Me.Auditoria_ContestacaoCompletedEvent) Is Nothing) Then
-                Dim invokeArgs As System.Web.Services.Protocols.InvokeCompletedEventArgs = CType(arg, System.Web.Services.Protocols.InvokeCompletedEventArgs)
+                Dim invokeArgs As System.Web.Services.Protocols.InvokeCompletedEventArgs = CType(arg,System.Web.Services.Protocols.InvokeCompletedEventArgs)
                 RaiseEvent Auditoria_ContestacaoCompleted(Me, New Auditoria_ContestacaoCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState))
             End If
         End Sub
-
+        
         '''<remarks/>
         Public Shadows Sub CancelAsync(ByVal userState As Object)
             MyBase.CancelAsync(userState)
@@ -216,53 +215,53 @@ Namespace WS_GUA_Auditoria
     '''<remarks/>
     <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.4084.0")>  _
     Public Delegate Sub AuditoriaCompletedEventHandler(ByVal sender As Object, ByVal e As AuditoriaCompletedEventArgs)
-
+    
     '''<remarks/>
-    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.4084.0"),
-     System.Diagnostics.DebuggerStepThroughAttribute(),
-     System.ComponentModel.DesignerCategoryAttribute("code")>
+    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.4084.0"),  _
+     System.Diagnostics.DebuggerStepThroughAttribute(),  _
+     System.ComponentModel.DesignerCategoryAttribute("code")>  _
     Partial Public Class AuditoriaCompletedEventArgs
         Inherits System.ComponentModel.AsyncCompletedEventArgs
-
+        
         Private results() As Object
-
+        
         Friend Sub New(ByVal results() As Object, ByVal exception As System.Exception, ByVal cancelled As Boolean, ByVal userState As Object)
             MyBase.New(exception, cancelled, userState)
             Me.results = results
         End Sub
-
+        
         '''<remarks/>
         Public ReadOnly Property Result() As System.Data.DataSet
             Get
                 Me.RaiseExceptionIfNecessary
-                Return CType(Me.results(0), System.Data.DataSet)
+                Return CType(Me.results(0),System.Data.DataSet)
             End Get
         End Property
     End Class
-
+    
     '''<remarks/>
-    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.4084.0")>
+    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.4084.0")>  _
     Public Delegate Sub Auditoria_ContestacaoCompletedEventHandler(ByVal sender As Object, ByVal e As Auditoria_ContestacaoCompletedEventArgs)
-
+    
     '''<remarks/>
-    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.4084.0"),
-     System.Diagnostics.DebuggerStepThroughAttribute(),
-     System.ComponentModel.DesignerCategoryAttribute("code")>
+    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.4084.0"),  _
+     System.Diagnostics.DebuggerStepThroughAttribute(),  _
+     System.ComponentModel.DesignerCategoryAttribute("code")>  _
     Partial Public Class Auditoria_ContestacaoCompletedEventArgs
         Inherits System.ComponentModel.AsyncCompletedEventArgs
-
+        
         Private results() As Object
-
+        
         Friend Sub New(ByVal results() As Object, ByVal exception As System.Exception, ByVal cancelled As Boolean, ByVal userState As Object)
             MyBase.New(exception, cancelled, userState)
             Me.results = results
         End Sub
-
+        
         '''<remarks/>
         Public ReadOnly Property Result() As System.Data.DataSet
             Get
-                Me.RaiseExceptionIfNecessary()
-                Return CType(Me.results(0), System.Data.DataSet)
+                Me.RaiseExceptionIfNecessary
+                Return CType(Me.results(0),System.Data.DataSet)
             End Get
         End Property
     End Class

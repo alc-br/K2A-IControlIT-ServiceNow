@@ -101,6 +101,7 @@
     <Content Include="WSContrato.asmx" />
     <Content Include="WSEstoque.asmx" />
     <Content Include="WSManutencao.asmx" />
+    <Content Include="WSChamado.asmx" />
     <Content Include="WSModulo.asmx" />
     <Content Include="WSPolitica.asmx" />
     <Content Include="WSRateio.asmx" />
@@ -155,6 +156,10 @@
     </Compile>
     <Compile Include="WSManutencao.asmx.vb">
       <DependentUpon>WSManutencao.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="WSChamado.asmx.vb">
+      <DependentUpon>WSChamado.asmx</DependentUpon>
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="WSModulo.asmx.vb">

@@ -1,0 +1,214 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--
+https://go.microsoft.com/fwlink/?LinkID=208121.
+-->
+<Project>
+  <PropertyGroup>
+    <_PublishTargetUrl>D:\Documents\KKK\Publicado\WS_IControlIT</_PublishTargetUrl>
+    <History>True|2024-08-28T20:07:38.1891088Z||;True|2024-08-28T17:01:30.8130768-03:00||;True|2024-08-28T16:47:48.5421334-03:00||;True|2024-08-28T16:39:33.9013076-03:00||;True|2024-08-28T16:07:58.7284452-03:00||;True|2024-08-28T16:00:57.9446829-03:00||;True|2024-08-28T15:56:16.8378331-03:00||;True|2024-08-28T15:56:03.9561700-03:00||;True|2024-08-28T15:53:15.6329226-03:00||;True|2024-08-28T15:51:24.3645175-03:00||;True|2024-08-28T15:49:13.3225619-03:00||;True|2024-08-28T15:40:42.7259412-03:00||;True|2024-08-28T15:30:06.1312178-03:00||;True|2024-08-28T14:57:40.9746443-03:00||;True|2024-08-28T14:52:26.4121868-03:00||;True|2024-08-28T14:50:35.4063253-03:00||;True|2024-08-28T14:25:19.5469782-03:00||;True|2024-08-28T14:25:15.0324295-03:00||;True|2024-08-27T22:20:41.0648682-03:00||;True|2024-08-27T21:43:41.0391116-03:00||;True|2024-08-27T18:19:03.0078839-03:00||;True|2024-08-27T17:47:49.1618241-03:00||;True|2024-08-27T17:25:24.5781914-03:00||;True|2024-08-27T14:32:22.2539820-03:00||;True|2024-08-27T13:45:39.0826349-03:00||;</History>
+    <LastFailureDetails />
+  </PropertyGroup>
+  <ItemGroup>
+    <File Include="bin/Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll">
+      <publishTime>09/05/2018 13:10:50</publishTime>
+    </File>
+    <File Include="bin/roslyn/csc.exe">
+      <publishTime>08/08/2018 02:38:48</publishTime>
+    </File>
+    <File Include="bin/roslyn/csc.exe.config">
+      <publishTime>08/08/2018 09:18:12</publishTime>
+    </File>
+    <File Include="bin/roslyn/csc.rsp">
+      <publishTime>08/08/2018 09:09:42</publishTime>
+    </File>
+    <File Include="bin/roslyn/csi.exe">
+      <publishTime>08/08/2018 02:38:48</publishTime>
+    </File>
+    <File Include="bin/roslyn/csi.exe.config">
+      <publishTime>08/08/2018 09:18:34</publishTime>
+    </File>
+    <File Include="bin/roslyn/csi.rsp">
+      <publishTime>08/08/2018 09:09:56</publishTime>
+    </File>
+    <File Include="bin/roslyn/Microsoft.Build.Tasks.CodeAnalysis.dll">
+      <publishTime>08/08/2018 02:38:48</publishTime>
+    </File>
+    <File Include="bin/roslyn/Microsoft.CodeAnalysis.CSharp.dll">
+      <publishTime>08/08/2018 02:38:48</publishTime>
+    </File>
+    <File Include="bin/roslyn/Microsoft.CodeAnalysis.CSharp.Scripting.dll">
+      <publishTime>08/08/2018 02:38:48</publishTime>
+    </File>
+    <File Include="bin/roslyn/Microsoft.CodeAnalysis.dll">
+      <publishTime>08/08/2018 02:38:48</publishTime>
+    </File>
+    <File Include="bin/roslyn/Microsoft.CodeAnalysis.Scripting.dll">
+      <publishTime>08/08/2018 02:38:48</publishTime>
+    </File>
+    <File Include="bin/roslyn/Microsoft.CodeAnalysis.VisualBasic.dll">
+      <publishTime>08/08/2018 02:38:48</publishTime>
+    </File>
+    <File Include="bin/roslyn/Microsoft.CSharp.Core.targets">
+      <publishTime>08/08/2018 09:09:42</publishTime>
+    </File>
+    <File Include="bin/roslyn/Microsoft.DiaSymReader.Native.amd64.dll">
+      <publishTime>12/05/2017 07:36:44</publishTime>
+    </File>
+    <File Include="bin/roslyn/Microsoft.DiaSymReader.Native.x86.dll">
+      <publishTime>12/05/2017 07:36:44</publishTime>
+    </File>
+    <File Include="bin/roslyn/Microsoft.Managed.Core.targets">
+      <publishTime>08/08/2018 09:09:42</publishTime>
+    </File>
+    <File Include="bin/roslyn/Microsoft.VisualBasic.Core.targets">
+      <publishTime>08/08/2018 09:09:42</publishTime>
+    </File>
+    <File Include="bin/roslyn/Microsoft.Win32.Primitives.dll">
+      <publishTime>11/05/2016 16:55:32</publishTime>
+    </File>
+    <File Include="bin/roslyn/System.AppContext.dll">
+      <publishTime>11/05/2016 16:55:34</publishTime>
+    </File>
+    <File Include="bin/roslyn/System.Collections.Immutable.dll">
+      <publishTime>05/16/2018 00:29:34</publishTime>
+    </File>
+    <File Include="bin/roslyn/System.Console.dll">
+      <publishTime>11/05/2016 16:55:48</publishTime>
+    </File>
+    <File Include="bin/roslyn/System.Diagnostics.DiagnosticSource.dll">
+      <publishTime>11/05/2016 16:55:52</publishTime>
+    </File>
+    <File Include="bin/roslyn/System.Diagnostics.FileVersionInfo.dll">
+      <publishTime>11/05/2016 16:55:56</publishTime>
+    </File>
+    <File Include="bin/roslyn/System.Diagnostics.StackTrace.dll">
+      <publishTime>11/05/2016 16:55:52</publishTime>
+    </File>
+    <File Include="bin/roslyn/System.Globalization.Calendars.dll">
+      <publishTime>11/05/2016 16:56:02</publishTime>
+    </File>
+    <File Include="bin/roslyn/System.IO.Compression.dll">
+      <publishTime>11/05/2016 16:56:08</publishTime>
+    </File>
+    <File Include="bin/roslyn/System.IO.Compression.ZipFile.dll">
+      <publishTime>11/05/2016 16:56:04</publishTime>
+    </File>
+    <File Include="bin/roslyn/System.IO.FileSystem.dll">
+      <publishTime>11/05/2016 16:56:08</publishTime>
+    </File>
+    <File Include="bin/roslyn/System.IO.FileSystem.Primitives.dll">
+      <publishTime>11/05/2016 16:56:08</publishTime>
+    </File>
+    <File Include="bin/roslyn/System.Net.Http.dll">
+      <publishTime>11/05/2016 16:56:30</publishTime>
+    </File>
+    <File Include="bin/roslyn/System.Net.Sockets.dll">
+      <publishTime>11/05/2016 16:56:34</publishTime>
+    </File>
+    <File Include="bin/roslyn/System.Reflection.Metadata.dll">
+      <publishTime>05/16/2018 00:29:44</publishTime>
+    </File>
+    <File Include="bin/roslyn/System.Runtime.InteropServices.RuntimeInformation.dll">
+      <publishTime>11/05/2016 16:57:00</publishTime>
+    </File>
+    <File Include="bin/roslyn/System.Security.Cryptography.Algorithms.dll">
+      <publishTime>11/05/2016 16:57:14</publishTime>
+    </File>
+    <File Include="bin/roslyn/System.Security.Cryptography.Encoding.dll">
+      <publishTime>11/05/2016 16:57:08</publishTime>
+    </File>
+    <File Include="bin/roslyn/System.Security.Cryptography.Primitives.dll">
+      <publishTime>11/05/2016 16:57:18</publishTime>
+    </File>
+    <File Include="bin/roslyn/System.Security.Cryptography.X509Certificates.dll">
+      <publishTime>11/05/2016 16:57:18</publishTime>
+    </File>
+    <File Include="bin/roslyn/System.Text.Encoding.CodePages.dll">
+      <publishTime>11/05/2016 16:57:20</publishTime>
+    </File>
+    <File Include="bin/roslyn/System.Threading.Tasks.Extensions.dll">
+      <publishTime>11/05/2016 16:57:24</publishTime>
+    </File>
+    <File Include="bin/roslyn/System.ValueTuple.dll">
+      <publishTime>11/05/2016 16:57:30</publishTime>
+    </File>
+    <File Include="bin/roslyn/System.Xml.ReaderWriter.dll">
+      <publishTime>11/05/2016 16:57:36</publishTime>
+    </File>
+    <File Include="bin/roslyn/System.Xml.XmlDocument.dll">
+      <publishTime>11/05/2016 16:57:34</publishTime>
+    </File>
+    <File Include="bin/roslyn/System.Xml.XPath.dll">
+      <publishTime>11/05/2016 16:57:40</publishTime>
+    </File>
+    <File Include="bin/roslyn/System.Xml.XPath.XDocument.dll">
+      <publishTime>11/05/2016 16:57:34</publishTime>
+    </File>
+    <File Include="bin/roslyn/vbc.exe">
+      <publishTime>08/08/2018 02:38:48</publishTime>
+    </File>
+    <File Include="bin/roslyn/vbc.exe.config">
+      <publishTime>08/08/2018 09:18:18</publishTime>
+    </File>
+    <File Include="bin/roslyn/vbc.rsp">
+      <publishTime>08/08/2018 09:09:46</publishTime>
+    </File>
+    <File Include="bin/roslyn/VBCSCompiler.exe">
+      <publishTime>08/08/2018 02:38:48</publishTime>
+    </File>
+    <File Include="bin/roslyn/VBCSCompiler.exe.config">
+      <publishTime>08/08/2018 09:18:16</publishTime>
+    </File>
+    <File Include="bin/WS_IControlIT.dll">
+      <publishTime>08/28/2024 17:18:47</publishTime>
+    </File>
+    <File Include="bin/WS_IControlIT.pdb">
+      <publishTime>08/28/2024 17:18:47</publishTime>
+    </File>
+    <File Include="bin/WS_IControlIT.xml">
+      <publishTime>08/28/2024 17:18:47</publishTime>
+    </File>
+    <File Include="Default.aspx">
+      <publishTime>08/20/2024 13:47:21</publishTime>
+    </File>
+    <File Include="Web.config">
+      <publishTime>08/28/2024 17:19:43</publishTime>
+    </File>
+    <File Include="WebService1.asmx">
+      <publishTime>08/27/2024 14:31:07</publishTime>
+    </File>
+    <File Include="WSAuditoria.asmx">
+      <publishTime>08/20/2024 13:47:21</publishTime>
+    </File>
+    <File Include="WSCadastro.asmx">
+      <publishTime>08/20/2024 13:47:21</publishTime>
+    </File>
+    <File Include="WSChamado.asmx">
+      <publishTime>08/27/2024 14:34:17</publishTime>
+    </File>
+    <File Include="WSChamado2.asmx">
+      <publishTime>08/27/2024 14:27:13</publishTime>
+    </File>
+    <File Include="WSConsulta.asmx">
+      <publishTime>08/20/2024 13:47:21</publishTime>
+    </File>
+    <File Include="WSContrato.asmx">
+      <publishTime>08/20/2024 13:47:21</publishTime>
+    </File>
+    <File Include="WSEstoque.asmx">
+      <publishTime>08/20/2024 13:47:21</publishTime>
+    </File>
+    <File Include="WSManutencao.asmx">
+      <publishTime>08/20/2024 13:47:21</publishTime>
+    </File>
+    <File Include="WSModulo.asmx">
+      <publishTime>08/20/2024 13:47:21</publishTime>
+    </File>
+    <File Include="WSPolitica.asmx">
+      <publishTime>08/20/2024 13:47:21</publishTime>
+    </File>
+    <File Include="WSRateio.asmx">
+      <publishTime>08/20/2024 13:47:21</publishTime>
+    </File>
+  </ItemGroup>
+</Project>

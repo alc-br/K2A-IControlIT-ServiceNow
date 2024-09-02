@@ -29,7 +29,11 @@
         "frameworks": {
           "net8.0": {
             "targetAlias": "net8.0",
-            "projectReferences": {}
+            "projectReferences": {
+              "D:\\Documents\\KKK\\Fonte\\V1\\WS_IControlIT\\WS_IControlIT.vbproj": {
+                "projectPath": "D:\\Documents\\KKK\\Fonte\\V1\\WS_IControlIT\\WS_IControlIT.vbproj"
+              }
+            }
           }
         },
         "warningProperties": {
@@ -62,6 +66,10 @@
             "Swashbuckle.AspNetCore": {
               "target": "Package",
               "version": "[6.4.0, )"
+            },
+            "System.Configuration.ConfigurationManager": {
+              "target": "Package",
+              "version": "[8.0.0, )"
             }
           },
           "imports": [
@@ -85,6 +93,21 @@
           },
           "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.401/PortableRuntimeIdentifierGraph.json"
         }
+      }
+    },
+    "D:\\Documents\\KKK\\Fonte\\V1\\WS_IControlIT\\WS_IControlIT.vbproj": {
+      "restore": {
+        "projectUniqueName": "D:\\Documents\\KKK\\Fonte\\V1\\WS_IControlIT\\WS_IControlIT.vbproj",
+        "projectName": "WS_IControlIT",
+        "projectPath": "D:\\Documents\\KKK\\Fonte\\V1\\WS_IControlIT\\WS_IControlIT.vbproj",
+        "frameworks": {
+          "net472": {
+            "projectReferences": {}
+          }
+        }
+      },
+      "frameworks": {
+        "net472": {}
       }
     }
   }

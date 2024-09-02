@@ -1,6 +1,7 @@
 D:\Documents\KKK\Fonte\V1\IControlIT.Connect\bin\Release\net8.0\web.config
 D:\Documents\KKK\Fonte\V1\IControlIT.Connect\bin\Release\net8.0\appsettings.Development.json
 D:\Documents\KKK\Fonte\V1\IControlIT.Connect\bin\Release\net8.0\appsettings.json
+D:\Documents\KKK\Fonte\V1\IControlIT.Connect\bin\Release\net8.0\libman.json
 D:\Documents\KKK\Fonte\V1\IControlIT.Connect\bin\Release\net8.0\IControlIT.Connect.exe
 D:\Documents\KKK\Fonte\V1\IControlIT.Connect\bin\Release\net8.0\IControlIT.Connect.deps.json
 D:\Documents\KKK\Fonte\V1\IControlIT.Connect\bin\Release\net8.0\IControlIT.Connect.runtimeconfig.json
@@ -24,6 +25,10 @@ D:\Documents\KKK\Fonte\V1\IControlIT.Connect\bin\Release\net8.0\Serilog.Sinks.Fi
 D:\Documents\KKK\Fonte\V1\IControlIT.Connect\bin\Release\net8.0\Swashbuckle.AspNetCore.Swagger.dll
 D:\Documents\KKK\Fonte\V1\IControlIT.Connect\bin\Release\net8.0\Swashbuckle.AspNetCore.SwaggerGen.dll
 D:\Documents\KKK\Fonte\V1\IControlIT.Connect\bin\Release\net8.0\Swashbuckle.AspNetCore.SwaggerUI.dll
+D:\Documents\KKK\Fonte\V1\IControlIT.Connect\bin\Release\net8.0\WS_IControlIT.dll
+D:\Documents\KKK\Fonte\V1\IControlIT.Connect\bin\Release\net8.0\WS_IControlIT.pdb
+D:\Documents\KKK\Fonte\V1\IControlIT.Connect\bin\Release\net8.0\WS_IControlIT.xml
+D:\Documents\KKK\Fonte\V1\IControlIT.Connect\bin\Release\net8.0\WS_IControlIT.dll.config
 D:\Documents\KKK\Fonte\V1\IControlIT.Connect\obj\Release\net8.0\IControlIT.Connect.csproj.AssemblyReference.cache
 D:\Documents\KKK\Fonte\V1\IControlIT.Connect\obj\Release\net8.0\IControlIT.Connect.GeneratedMSBuildEditorConfig.editorconfig
 D:\Documents\KKK\Fonte\V1\IControlIT.Connect\obj\Release\net8.0\IControlIT.Connect.AssemblyInfoInputs.cache
@@ -45,3 +50,5 @@ D:\Documents\KKK\Fonte\V1\IControlIT.Connect\obj\Release\net8.0\refint\IControlI
 D:\Documents\KKK\Fonte\V1\IControlIT.Connect\obj\Release\net8.0\IControlIT.Connect.pdb
 D:\Documents\KKK\Fonte\V1\IControlIT.Connect\obj\Release\net8.0\IControlIT.Connect.genruntimeconfig.cache
 D:\Documents\KKK\Fonte\V1\IControlIT.Connect\obj\Release\net8.0\ref\IControlIT.Connect.dll
+D:\Documents\KKK\Fonte\V1\IControlIT.Connect\bin\Release\net8.0\System.Configuration.ConfigurationManager.dll
+D:\Documents\KKK\Fonte\V1\IControlIT.Connect\bin\Release\net8.0\System.Security.Cryptography.ProtectedData.dll

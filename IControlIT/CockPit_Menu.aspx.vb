@@ -720,7 +720,7 @@
     ''    Call DesabilitaPanels()
     ''    Call DesativaCssBotao()
     ''    navChamado.Attributes("class") = "nav-item active"
-    ''    Response.Redirect("~/Solicitacao/Consulta_Solicitacao.aspx")
+    ''    Response.Redirect("~/Chamado/Consulta_Chamado.aspx")
     ''End Sub
 
     Protected Sub btPesquisar_Click(sender As Object, e As EventArgs)

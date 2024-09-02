@@ -136,7 +136,7 @@
             '-----------------------------------------------------------------------------------------------------------
             If v_dataSet.Tables(0).Rows.Count > 0 Then
                 If v_dataSet.Tables(0).Rows.Count = 1 And v_dataSet.Tables(0).Rows(0).Item("ID_Menu") = 18 Then
-                    Response.Redirect("~/Solicitacao/Consulta_Solicitacao.aspx")
+                    Response.Redirect("~/Chamado/Consulta_Chamado.aspx")
                 End If
             End If
 
@@ -662,7 +662,7 @@
     End Sub
 
     Protected Sub btEstatisticaChamado_Click(sender As Object, e As EventArgs) Handles btEstatisticaChamado.Click
-        Response.Redirect("~/Solicitacao/Estatistica_Solicitacao.aspx")
+        Response.Redirect("~/Chamado/Estatistica_Solicitacao.aspx")
     End Sub
 
     Protected Sub btMonitoramentoDados_Click(sender As Object, e As EventArgs) Handles btMonitoramentoDados.Click
@@ -821,7 +821,7 @@
     End Sub
 
     Protected Sub btIncidente_Click(sender As Object, e As EventArgs)
-        Response.Redirect("~/Solicitacao/Consulta_Solicitacao.aspx")
+        Response.Redirect("~/Chamado/Consulta_Chamado.aspx")
     End Sub
 
     Protected Sub btMarcacao_Click(sender As Object, e As EventArgs)

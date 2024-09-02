@@ -1229,16 +1229,16 @@
     <Content Include="Scripts\umd\popper.min.js" />
     <Content Include="Scripts\utils.js" />
     <Content Include="Sessao.aspx" />
-    <Content Include="Solicitacao\Consulta_Solicitacao.aspx" />
-    <Content Include="Solicitacao\Data_Parada.aspx" />
-    <Content Include="Solicitacao\Estatistica_Solicitacao.aspx" />
-    <Content Include="Solicitacao\Fila_Atendimento.aspx" />
-    <Content Include="Solicitacao\SLA_Solicitacao.aspx" />
-    <Content Include="Solicitacao\Solicitacao.aspx" />
-    <Content Include="Solicitacao\Solicitacao_Roaming.aspx" />
-    <Content Include="Solicitacao\Solicitacao_Unidade.aspx" />
-    <Content Include="Solicitacao\Solucao.aspx" />
-    <Content Include="Solicitacao\Tipo_Solicitcao.aspx" />
+    <Content Include="Chamado\Consulta_Chamado.aspx" />
+    <Content Include="Chamado\Data_Parada.aspx" />
+    <Content Include="Chamado\Estatistica_Solicitacao.aspx" />
+    <Content Include="Chamado\Fila_Atendimento.aspx" />
+    <Content Include="Chamado\SLA_Solicitacao.aspx" />
+    <Content Include="Chamado\Solicitacao.aspx" />
+    <Content Include="Chamado\Solicitacao_Roaming.aspx" />
+    <Content Include="Chamado\Solicitacao_Unidade.aspx" />
+    <Content Include="Chamado\Solucao.aspx" />
+    <Content Include="Chamado\Tipo_Solicitcao.aspx" />
     <Content Include="tempImages\charts_3\chart_3_7.png" />
     <Content Include="tempImages\chart_0_0.png" />
     <Content Include="tempImages\chart_0_1.png" />
@@ -1268,10 +1268,16 @@
     <Content Include="Uploads\HtmlPage1.html">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Web References\WS_GUA_Auditoria\Reference.map">
+    <None Include="Web References\WS_GUA_Chamado\Reference.map">
       <Generator>MSDiscoCodeGenerator</Generator>
       <LastGenOutput>Reference.vb</LastGenOutput>
-    </Content>
+    </None>
+    <None Include="Web References\WS_GUA_Chamado\WSChamado.wsdl" />
+    <None Include="Web References\WS_GUA_Auditoria\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.vb</LastGenOutput>
+    </None>
+    <None Include="Web References\WS_GUA_Chamado\WSChamado.disco" />
     <Content Include="webfonts\fa-brands-400.svg" />
     <Content Include="webfonts\fa-regular-400.svg" />
     <Content Include="webfonts\fa-solid-900.svg" />
@@ -2174,73 +2180,73 @@
       <DependentUpon>Sessao.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Solicitacao\Consulta_Solicitacao.aspx.designer.vb">
-      <DependentUpon>Consulta_Solicitacao.aspx</DependentUpon>
+    <Compile Include="Chamado\Consulta_Chamado.aspx.designer.vb">
+      <DependentUpon>Consulta_Chamado.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Solicitacao\Consulta_Solicitacao.aspx.vb">
-      <DependentUpon>Consulta_Solicitacao.aspx</DependentUpon>
+    <Compile Include="Chamado\Consulta_Chamado.aspx.vb">
+      <DependentUpon>Consulta_Chamado.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Solicitacao\Data_Parada.aspx.designer.vb">
+    <Compile Include="Chamado\Data_Parada.aspx.designer.vb">
       <DependentUpon>Data_Parada.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Solicitacao\Data_Parada.aspx.vb">
+    <Compile Include="Chamado\Data_Parada.aspx.vb">
       <DependentUpon>Data_Parada.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Solicitacao\Estatistica_Solicitacao.aspx.designer.vb">
+    <Compile Include="Chamado\Estatistica_Solicitacao.aspx.designer.vb">
       <DependentUpon>Estatistica_Solicitacao.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Solicitacao\Estatistica_Solicitacao.aspx.vb">
+    <Compile Include="Chamado\Estatistica_Solicitacao.aspx.vb">
       <DependentUpon>Estatistica_Solicitacao.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Solicitacao\Fila_Atendimento.aspx.designer.vb">
+    <Compile Include="Chamado\Fila_Atendimento.aspx.designer.vb">
       <DependentUpon>Fila_Atendimento.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Solicitacao\Fila_Atendimento.aspx.vb">
+    <Compile Include="Chamado\Fila_Atendimento.aspx.vb">
       <DependentUpon>Fila_Atendimento.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Solicitacao\SLA_Solicitacao.aspx.designer.vb">
+    <Compile Include="Chamado\SLA_Solicitacao.aspx.designer.vb">
       <DependentUpon>SLA_Solicitacao.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Solicitacao\SLA_Solicitacao.aspx.vb">
+    <Compile Include="Chamado\SLA_Solicitacao.aspx.vb">
       <DependentUpon>SLA_Solicitacao.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Solicitacao\Solicitacao.aspx.designer.vb">
+    <Compile Include="Chamado\Solicitacao.aspx.designer.vb">
       <DependentUpon>Solicitacao.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Solicitacao\Solicitacao.aspx.vb">
+    <Compile Include="Chamado\Solicitacao.aspx.vb">
       <DependentUpon>Solicitacao.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Solicitacao\Solicitacao_Roaming.aspx.designer.vb">
+    <Compile Include="Chamado\Solicitacao_Roaming.aspx.designer.vb">
       <DependentUpon>Solicitacao_Roaming.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Solicitacao\Solicitacao_Roaming.aspx.vb">
+    <Compile Include="Chamado\Solicitacao_Roaming.aspx.vb">
       <DependentUpon>Solicitacao_Roaming.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Solicitacao\Solicitacao_Unidade.aspx.designer.vb">
+    <Compile Include="Chamado\Solicitacao_Unidade.aspx.designer.vb">
       <DependentUpon>Solicitacao_Unidade.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Solicitacao\Solicitacao_Unidade.aspx.vb">
+    <Compile Include="Chamado\Solicitacao_Unidade.aspx.vb">
       <DependentUpon>Solicitacao_Unidade.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Solicitacao\Solucao.aspx.designer.vb">
+    <Compile Include="Chamado\Solucao.aspx.designer.vb">
       <DependentUpon>Solucao.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Solicitacao\Solucao.aspx.vb">
+    <Compile Include="Chamado\Solucao.aspx.vb">
       <DependentUpon>Solucao.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Solicitacao\Tipo_Solicitcao.aspx.designer.vb">
+    <Compile Include="Chamado\Tipo_Solicitcao.aspx.designer.vb">
       <DependentUpon>Tipo_Solicitcao.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Solicitacao\Tipo_Solicitcao.aspx.vb">
+    <Compile Include="Chamado\Tipo_Solicitcao.aspx.vb">
       <DependentUpon>Tipo_Solicitcao.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
@@ -2285,6 +2291,11 @@
     <Compile Include="Termo\Termo_Responsabilidade_Desktop.aspx.vb">
       <DependentUpon>Termo_Responsabilidade_Desktop.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Web References\WS_GUA_Chamado\Reference.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
     </Compile>
     <Compile Include="Web References\WS_GUA_Auditoria\Reference.vb">
       <AutoGen>True</AutoGen>
@@ -2391,6 +2402,17 @@
       </CachedDynamicPropName>
       <CachedAppSettingsObjectName>MySettings</CachedAppSettingsObjectName>
       <CachedSettingsPropName>Ativvus_WS_GUA_Cadastro_WSCadastro</CachedSettingsPropName>
+    </WebReferenceUrl>
+    <WebReferenceUrl Include="http://localhost:8080/WSChamado.asmx">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\WS_GUA_Chamado\</RelPath>
+      <UpdateFromURL>http://localhost:8080/WSChamado.asmx</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>MySettings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>IControlIT_localhost_WSChamado</CachedSettingsPropName>
     </WebReferenceUrl>
     <WebReferenceUrl Include="http://localhost:8080/WSConsulta.asmx">
       <UrlBehavior>Dynamic</UrlBehavior>

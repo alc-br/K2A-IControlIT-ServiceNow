@@ -15,7 +15,7 @@ Option Explicit On
 Namespace My
     
     <Global.System.Runtime.CompilerServices.CompilerGeneratedAttribute(),  _
-     Global.System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.VisualStudio.Editors.SettingsDesigner.SettingsSingleFileGenerator", "17.10.0.0"),  _
+     Global.System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.VisualStudio.Editors.SettingsDesigner.SettingsSingleFileGenerator", "17.11.0.0"),  _
      Global.System.ComponentModel.EditorBrowsableAttribute(Global.System.ComponentModel.EditorBrowsableState.Advanced)>  _
     Partial Friend NotInheritable Class MySettings
         Inherits Global.System.Configuration.ApplicationSettingsBase
@@ -181,6 +181,64 @@ Namespace My
         Public ReadOnly Property Ativvus_WS_GUA_Rateio_WSRateio() As String
             Get
                 Return CType(Me("Ativvus_WS_GUA_Rateio_WSRateio"),String)
+            End Get
+        End Property
+        
+        <Global.System.Configuration.ApplicationScopedSettingAttribute(),  _
+         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.Configuration.DefaultSettingValueAttribute("http://localhost:8080/WSChamado.asmx")>  _
+        Public ReadOnly Property IControlIT_WS_GUA_Chamado_WSChamado() As String
+            Get
+                Return CType(Me("IControlIT_WS_GUA_Chamado_WSChamado"),String)
+            End Get
+        End Property
+        
+        <Global.System.Configuration.ApplicationScopedSettingAttribute(),  _
+         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.Configuration.DefaultSettingValueAttribute("http://localhost:8080/WSChamado.asmx")>  _
+        Public ReadOnly Property Ativvus_WS_GUA_Chamado_WSChamado() As String
+            Get
+                Return CType(Me("Ativvus_WS_GUA_Chamado_WSChamado"),String)
+            End Get
+        End Property
+        
+        <Global.System.Configuration.ApplicationScopedSettingAttribute(),  _
+         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.Configuration.SpecialSettingAttribute(Global.System.Configuration.SpecialSetting.WebServiceUrl),  _
+         Global.System.Configuration.DefaultSettingValueAttribute("http://localhost:8080/WSAuditoria.asmx")>  _
+        Public ReadOnly Property Ativvus_WS_GUA_Auditoria_WSAuditoria() As String
+            Get
+                Return CType(Me("Ativvus_WS_GUA_Auditoria_WSAuditoria"),String)
+            End Get
+        End Property
+        
+        <Global.System.Configuration.ApplicationScopedSettingAttribute(),  _
+         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.Configuration.SpecialSettingAttribute(Global.System.Configuration.SpecialSetting.WebServiceUrl),  _
+         Global.System.Configuration.DefaultSettingValueAttribute("http://localhost:8080/WSChamado.asmx")>  _
+        Public ReadOnly Property IControlIT_localhost_WSChamado() As String
+            Get
+                Return CType(Me("IControlIT_localhost_WSChamado"),String)
+            End Get
+        End Property
+        
+        <Global.System.Configuration.ApplicationScopedSettingAttribute(),  _
+         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.Configuration.SpecialSettingAttribute(Global.System.Configuration.SpecialSetting.WebServiceUrl),  _
+         Global.System.Configuration.DefaultSettingValueAttribute("http://localhost:8080/WSChamado.asmx")>  _
+        Public ReadOnly Property IControlIT_localhost1_WSChamado() As String
+            Get
+                Return CType(Me("IControlIT_localhost1_WSChamado"),String)
+            End Get
+        End Property
+        
+        <Global.System.Configuration.ApplicationScopedSettingAttribute(),  _
+         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.Configuration.SpecialSettingAttribute(Global.System.Configuration.SpecialSetting.WebServiceUrl),  _
+         Global.System.Configuration.DefaultSettingValueAttribute("http://localhost:8080/WSChamado.asmx")>  _
+        Public ReadOnly Property IControlIT_localhost2_WSChamado() As String
+            Get
+                Return CType(Me("IControlIT_localhost2_WSChamado"),String)
             End Get
         End Property
     End Class

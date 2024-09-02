@@ -41,5 +41,23 @@
     <Setting Name="Ativvus_WS_GUA_Rateio_WSRateio" Type="(Web Service URL)" Scope="Application">
       <Value Profile="(Default)">http://localhost:8080/WSRateio.asmx</Value>
     </Setting>
+    <Setting Name="IControlIT_WS_GUA_Chamado_WSChamado" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">http://localhost:8080/WSChamado.asmx</Value>
+    </Setting>
+    <Setting Name="Ativvus_WS_GUA_Chamado_WSChamado" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">http://localhost:8080/WSChamado.asmx</Value>
+    </Setting>
+    <Setting Name="Ativvus_WS_GUA_Auditoria_WSAuditoria" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://localhost:8080/WSAuditoria.asmx</Value>
+    </Setting>
+    <Setting Name="IControlIT_localhost_WSChamado" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://localhost:8080/WSChamado.asmx</Value>
+    </Setting>
+    <Setting Name="IControlIT_localhost1_WSChamado" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://localhost:8080/WSChamado.asmx</Value>
+    </Setting>
+    <Setting Name="IControlIT_localhost2_WSChamado" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://localhost:8080/WSChamado.asmx</Value>
+    </Setting>
   </Settings>
 </SettingsFile>

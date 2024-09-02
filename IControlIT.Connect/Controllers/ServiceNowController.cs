@@ -1,7 +1,7 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using IControlIT.Connect.Interfaces;
 using IControlIT.Connect.Models;
-using Newtonsoft.Json;
+using System.Threading.Tasks;
 
 namespace IControlIT.Connect.Service.Controllers
 {
@@ -10,10 +10,12 @@ namespace IControlIT.Connect.Service.Controllers
     public class ServiceNowController : ControllerBase
     {
         private readonly IExternalIntegration _serviceNowIntegration;
+        private readonly ServiceNowProcessor _processor;
 
-        public ServiceNowController(IExternalIntegration serviceNowIntegration)
+        public ServiceNowController(IExternalIntegration serviceNowIntegration, ServiceNowProcessor processor)
         {
             _serviceNowIntegration = serviceNowIntegration;
+            _processor = processor;
         }
 
         /// <summary>
@@ -25,14 +27,15 @@ namespace IControlIT.Connect.Service.Controllers
         [ProducesResponseType(StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
         [Produces("application/json")]
-        public IActionResult ProcessData([FromBody] ServiceNowRequest requestData)
+        public async Task<IActionResult> ProcessData([FromBody] ServiceNowRequest requestData)
         {
             if (requestData == null)
             {
                 return BadRequest("Invalid data.");
             }
 
-            _serviceNowIntegration.ProcessRequest(JsonConvert.SerializeObject(requestData));
+            await _processor.ProcessServiceNowRequestAsync(requestData);
+
             return Ok("Request processed successfully");
         }
     }

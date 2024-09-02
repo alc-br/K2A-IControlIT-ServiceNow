@@ -2,7 +2,7 @@
 {
     public interface IExternalIntegration
     {
-        void ProcessRequest(string requestData);
+        Task ProcessRequestAsync(string requestData);
         string SendResponse();
     }
 }

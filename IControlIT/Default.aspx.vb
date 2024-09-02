@@ -653,10 +653,20 @@ Public Class _Default
         Return vdataSet.Tables(0).Rows(0).Item("Token_Validade")
     End Function
 
+    '' CHIPAK - INICIO
+
     Protected Sub btLogin_Click(sender As Object, e As EventArgs) Handles btLogin.Click
         Try
             '-----valida usuario nao autenticado pelo IIS
             WS_Modulo.Credentials = System.Net.CredentialCache.DefaultCredentials
+
+            ' Verifica se a Session("Conn_Banco") está definida
+            If Session("Conn_Banco") Is Nothing Then
+                ScriptManager.RegisterStartupScript(Me, Me.GetType(), "alert", "alert('Session Conn_Banco is Nothing');", True)
+                Exit Sub
+            End If
+
+            ScriptManager.RegisterStartupScript(Me, Me.GetType(), "alert", "alert('Conn_Banco: " & Session("Conn_Banco").ToString() & "');", True)
 
             '----- testa se é o primeiro acesso do usuário
             vdataSet = WS_Modulo.Validacao_Global(Session("Conn_Banco"),
@@ -844,6 +854,8 @@ Public Class _Default
         End Try
     End Sub
 
+
+    '' CHIPAK - FIM
 
     'Protected Sub btnSite_Click(sender As Object, e As EventArgs) Handles btnSite.Click
     '    Response.Redirect("http://IControlIT.com.br/")

@@ -2,6 +2,7 @@ D:\Documents\KKK\Fonte\V1\IControlIT.Connect\obj\Release\net8.0\PubTmp\Out\ICont
 D:\Documents\KKK\Fonte\V1\IControlIT.Connect\obj\Release\net8.0\PubTmp\Out\web.config
 D:\Documents\KKK\Fonte\V1\IControlIT.Connect\obj\Release\net8.0\PubTmp\Out\appsettings.Development.json
 D:\Documents\KKK\Fonte\V1\IControlIT.Connect\obj\Release\net8.0\PubTmp\Out\appsettings.json
+D:\Documents\KKK\Fonte\V1\IControlIT.Connect\obj\Release\net8.0\PubTmp\Out\libman.json
 D:\Documents\KKK\Fonte\V1\IControlIT.Connect\obj\Release\net8.0\PubTmp\Out\IControlIT.Connect.dll
 D:\Documents\KKK\Fonte\V1\IControlIT.Connect\obj\Release\net8.0\PubTmp\Out\IControlIT.Connect.deps.json
 D:\Documents\KKK\Fonte\V1\IControlIT.Connect\obj\Release\net8.0\PubTmp\Out\IControlIT.Connect.runtimeconfig.json
@@ -24,3 +25,9 @@ D:\Documents\KKK\Fonte\V1\IControlIT.Connect\obj\Release\net8.0\PubTmp\Out\Seril
 D:\Documents\KKK\Fonte\V1\IControlIT.Connect\obj\Release\net8.0\PubTmp\Out\Swashbuckle.AspNetCore.Swagger.dll
 D:\Documents\KKK\Fonte\V1\IControlIT.Connect\obj\Release\net8.0\PubTmp\Out\Swashbuckle.AspNetCore.SwaggerGen.dll
 D:\Documents\KKK\Fonte\V1\IControlIT.Connect\obj\Release\net8.0\PubTmp\Out\Swashbuckle.AspNetCore.SwaggerUI.dll
+D:\Documents\KKK\Fonte\V1\IControlIT.Connect\obj\Release\net8.0\PubTmp\Out\System.Configuration.ConfigurationManager.dll
+D:\Documents\KKK\Fonte\V1\IControlIT.Connect\obj\Release\net8.0\PubTmp\Out\System.Security.Cryptography.ProtectedData.dll
+D:\Documents\KKK\Fonte\V1\IControlIT.Connect\obj\Release\net8.0\PubTmp\Out\WS_IControlIT.dll
+D:\Documents\KKK\Fonte\V1\IControlIT.Connect\obj\Release\net8.0\PubTmp\Out\WS_IControlIT.pdb
+D:\Documents\KKK\Fonte\V1\IControlIT.Connect\obj\Release\net8.0\PubTmp\Out\WS_IControlIT.xml
+D:\Documents\KKK\Fonte\V1\IControlIT.Connect\obj\Release\net8.0\PubTmp\Out\WS_IControlIT.dll.config

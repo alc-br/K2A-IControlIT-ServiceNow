@@ -3214,4 +3214,104 @@
       <returns>null if the request isn't handled by this convention; otherwise, the name of the selected action</returns>
       <param name="odataPath">The OData path.</param>
       <param name="controllerContext">The controller context.</param>
-      <param name="actionMap">The action map.</                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      
+      <param name="actionMap">The action map.</param>
+    </member>
+    <member name="T:System.Web.Http.OData.Routing.Conventions.EntitySetRoutingConvention">
+      <summary>An implementation of <see cref="T:System.Web.Http.OData.Routing.Conventions.IODataRoutingConvention" /> that handles entity sets.</summary>
+    </member>
+    <member name="M:System.Web.Http.OData.Routing.Conventions.EntitySetRoutingConvention.#ctor">
+      <summary>Initializes a new instance of the <see cref="T:System.Web.Http.OData.Routing.Conventions.EntitySetRoutingConvention" /> class.</summary>
+    </member>
+    <member name="M:System.Web.Http.OData.Routing.Conventions.EntitySetRoutingConvention.SelectAction(System.Web.Http.OData.Routing.ODataPath,System.Web.Http.Controllers.HttpControllerContext,System.Linq.ILookup{System.String,System.Web.Http.Controllers.HttpActionDescriptor})">
+      <summary>Selects the action for OData requests.</summary>
+      <returns>null if the request isn't handled by this convention; otherwise, the name of the selected action</returns>
+      <param name="odataPath">The OData path.</param>
+      <param name="controllerContext">The controller context.</param>
+      <param name="actionMap">The action map.</param>
+    </member>
+    <member name="M:System.Web.Http.OData.Routing.Conventions.EntitySetRoutingConvention.SelectController(System.Web.Http.OData.Routing.ODataPath,System.Net.Http.HttpRequestMessage)">
+      <summary>Selects the controller for OData requests.</summary>
+      <returns>null if the request isn't handled by this convention; otherwise, the name of the selected controller</returns>
+      <param name="odataPath">The OData path.</param>
+      <param name="request">The request.</param>
+    </member>
+    <member name="T:System.Web.Http.OData.Routing.Conventions.IODataRoutingConvention">
+      <summary>Provides an abstraction for selecting a controller and an action for OData requests.</summary>
+    </member>
+    <member name="M:System.Web.Http.OData.Routing.Conventions.IODataRoutingConvention.SelectAction(System.Web.Http.OData.Routing.ODataPath,System.Web.Http.Controllers.HttpControllerContext,System.Linq.ILookup{System.String,System.Web.Http.Controllers.HttpActionDescriptor})">
+      <summary>Selects the action for OData requests.</summary>
+      <returns>null if the request isn't handled by this convention; otherwise, the name of the selected action</returns>
+      <param name="odataPath">The OData path.</param>
+      <param name="controllerContext">The controller context.</param>
+      <param name="actionMap">The action map.</param>
+    </member>
+    <member name="M:System.Web.Http.OData.Routing.Conventions.IODataRoutingConvention.SelectController(System.Web.Http.OData.Routing.ODataPath,System.Net.Http.HttpRequestMessage)">
+      <summary>Selects the controller for OData requests.</summary>
+      <returns>null if the request isn't handled by this convention; otherwise, the name of the selected controller</returns>
+      <param name="odataPath">The OData path.</param>
+      <param name="request">The request.</param>
+    </member>
+    <member name="T:System.Web.Http.OData.Routing.Conventions.LinksRoutingConvention">
+      <summary>An implementation of <see cref="T:System.Web.Http.OData.Routing.Conventions.IODataRoutingConvention" /> that handles link manipulations.</summary>
+    </member>
+    <member name="M:System.Web.Http.OData.Routing.Conventions.LinksRoutingConvention.#ctor">
+      <summary>Initializes a new instance of the <see cref="T:System.Web.Http.OData.Routing.Conventions.LinksRoutingConvention" /> class.</summary>
+    </member>
+    <member name="M:System.Web.Http.OData.Routing.Conventions.LinksRoutingConvention.SelectAction(System.Web.Http.OData.Routing.ODataPath,System.Web.Http.Controllers.HttpControllerContext,System.Linq.ILookup{System.String,System.Web.Http.Controllers.HttpActionDescriptor})">
+      <summary>Selects the action.</summary>
+      <param name="odataPath">The odata path.</param>
+      <param name="controllerContext">The controller context.</param>
+      <param name="actionMap">The action map.</param>
+    </member>
+    <member name="T:System.Web.Http.OData.Routing.Conventions.MetadataRoutingConvention">
+      <summary>An implementation of <see cref="T:System.Web.Http.OData.Routing.Conventions.IODataRoutingConvention" /> that handles OData metadata requests.</summary>
+    </member>
+    <member name="M:System.Web.Http.OData.Routing.Conventions.MetadataRoutingConvention.#ctor">
+      <summary>Initializes a new instance of the <see cref="T:System.Web.Http.OData.Routing.Conventions.MetadataRoutingConvention" /> class.</summary>
+    </member>
+    <member name="M:System.Web.Http.OData.Routing.Conventions.MetadataRoutingConvention.SelectAction(System.Web.Http.OData.Routing.ODataPath,System.Web.Http.Controllers.HttpControllerContext,System.Linq.ILookup{System.String,System.Web.Http.Controllers.HttpActionDescriptor})">
+      <summary>Selects the action for OData requests.</summary>
+      <returns>null if the request isn't handled by this convention; otherwise, the name of the selected action</returns>
+      <param name="odataPath">The OData path.</param>
+      <param name="controllerContext">The controller context.</param>
+      <param name="actionMap">The action map.</param>
+    </member>
+    <member name="M:System.Web.Http.OData.Routing.Conventions.MetadataRoutingConvention.SelectController(System.Web.Http.OData.Routing.ODataPath,System.Net.Http.HttpRequestMessage)">
+      <summary>Selects the controller for OData requests.</summary>
+      <returns>null if the request isn't handled by this convention; otherwise, the name of the selected controller</returns>
+      <param name="odataPath">The OData path.</param>
+      <param name="request">The request.</param>
+    </member>
+    <member name="T:System.Web.Http.OData.Routing.Conventions.NavigationRoutingConvention">
+      <summary>An implementation of <see cref="T:System.Web.Http.OData.Routing.Conventions.IODataRoutingConvention" /> that handles navigation properties.</summary>
+    </member>
+    <member name="M:System.Web.Http.OData.Routing.Conventions.NavigationRoutingConvention.#ctor">
+      <summary>Initializes a new instance of the <see cref="T:System.Web.Http.OData.Routing.Conventions.NavigationRoutingConvention" /> class.</summary>
+    </member>
+    <member name="M:System.Web.Http.OData.Routing.Conventions.NavigationRoutingConvention.SelectAction(System.Web.Http.OData.Routing.ODataPath,System.Web.Http.Controllers.HttpControllerContext,System.Linq.ILookup{System.String,System.Web.Http.Controllers.HttpActionDescriptor})">
+      <summary>Selects the action.</summary>
+      <param name="odataPath">The odata path.</param>
+      <param name="controllerContext">The controller context.</param>
+      <param name="actionMap">The action map.</param>
+    </member>
+    <member name="T:System.Web.Http.OData.Routing.Conventions.ODataRoutingConventions">
+      <summary>Provides helper methods for creating routing conventions.</summary>
+    </member>
+    <member name="M:System.Web.Http.OData.Routing.Conventions.ODataRoutingConventions.CreateDefault">
+      <summary>Creates a mutable list of the default OData routing conventions.</summary>
+      <returns>A mutable list of the default OData routing conventions.</returns>
+    </member>
+    <member name="T:System.Web.Http.OData.Routing.Conventions.UnmappedRequestRoutingConvention">
+      <summary>An implementation of <see cref="T:System.Web.Http.OData.Routing.Conventions.IODataRoutingConvention" /> that always selects the action named HandleUnmappedRequest if that action is present.</summary>
+    </member>
+    <member name="M:System.Web.Http.OData.Routing.Conventions.UnmappedRequestRoutingConvention.#ctor">
+      <summary>Initializes a new instance of the <see cref="T:System.Web.Http.OData.Routing.Conventions.UnmappedRequestRoutingConvention" /> class.</summary>
+    </member>
+    <member name="M:System.Web.Http.OData.Routing.Conventions.UnmappedRequestRoutingConvention.SelectAction(System.Web.Http.OData.Routing.ODataPath,System.Web.Http.Controllers.HttpControllerContext,System.Linq.ILookup{System.String,System.Web.Http.Controllers.HttpActionDescriptor})">
+      <summary>Selects the action.</summary>
+      <param name="odataPath">The odata path.</param>
+      <param name="controllerContext">The controller context.</param>
+      <param name="actionMap">The action map.</param>
+    </member>
+  </members>
+</doc>
