@@ -1,0 +1,1 @@
+﻿<%@ WebService Language="vb" CodeBehind="MobileActionsHandler.asmx.vb" Class="Connect.ServiceNow.Handlers.MobileActionsHandler" %>

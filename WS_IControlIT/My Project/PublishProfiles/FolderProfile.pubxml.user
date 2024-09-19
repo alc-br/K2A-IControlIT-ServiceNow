@@ -5,10 +5,13 @@ https://go.microsoft.com/fwlink/?LinkID=208121.
 <Project>
   <PropertyGroup>
     <_PublishTargetUrl>D:\Documents\KKK\Publicado\WS_IControlIT</_PublishTargetUrl>
-    <History>True|2024-08-28T20:07:38.1891088Z||;True|2024-08-28T17:01:30.8130768-03:00||;True|2024-08-28T16:47:48.5421334-03:00||;True|2024-08-28T16:39:33.9013076-03:00||;True|2024-08-28T16:07:58.7284452-03:00||;True|2024-08-28T16:00:57.9446829-03:00||;True|2024-08-28T15:56:16.8378331-03:00||;True|2024-08-28T15:56:03.9561700-03:00||;True|2024-08-28T15:53:15.6329226-03:00||;True|2024-08-28T15:51:24.3645175-03:00||;True|2024-08-28T15:49:13.3225619-03:00||;True|2024-08-28T15:40:42.7259412-03:00||;True|2024-08-28T15:30:06.1312178-03:00||;True|2024-08-28T14:57:40.9746443-03:00||;True|2024-08-28T14:52:26.4121868-03:00||;True|2024-08-28T14:50:35.4063253-03:00||;True|2024-08-28T14:25:19.5469782-03:00||;True|2024-08-28T14:25:15.0324295-03:00||;True|2024-08-27T22:20:41.0648682-03:00||;True|2024-08-27T21:43:41.0391116-03:00||;True|2024-08-27T18:19:03.0078839-03:00||;True|2024-08-27T17:47:49.1618241-03:00||;True|2024-08-27T17:25:24.5781914-03:00||;True|2024-08-27T14:32:22.2539820-03:00||;True|2024-08-27T13:45:39.0826349-03:00||;</History>
+    <History>True|2024-09-17T19:04:13.1707900Z||;True|2024-09-17T16:04:08.2942372-03:00||;True|2024-09-17T14:59:05.8100157-03:00||;True|2024-09-17T14:52:54.1167896-03:00||;True|2024-09-17T14:42:06.3628743-03:00||;True|2024-09-17T14:30:00.7080212-03:00||;True|2024-09-17T14:07:03.9255602-03:00||;True|2024-09-17T14:06:20.5643573-03:00||;True|2024-09-17T14:03:20.0429727-03:00||;True|2024-09-17T14:02:37.9324939-03:00||;True|2024-09-17T11:15:49.7967854-03:00||;True|2024-09-17T11:15:39.6905509-03:00||;True|2024-09-17T10:27:47.5534017-03:00||;True|2024-09-17T10:24:00.6030102-03:00||;True|2024-09-17T10:23:14.6737008-03:00||;True|2024-09-17T10:18:46.9240871-03:00||;True|2024-09-17T10:16:43.9345480-03:00||;True|2024-09-17T10:03:21.4960091-03:00||;True|2024-09-17T09:20:53.5772510-03:00||;True|2024-09-17T09:18:20.6388058-03:00||;True|2024-09-17T09:14:16.0298315-03:00||;True|2024-09-17T09:11:59.2079439-03:00||;True|2024-09-17T09:10:24.4162488-03:00||;True|2024-09-17T08:57:51.1428730-03:00||;True|2024-09-17T08:57:05.9442227-03:00||;True|2024-09-17T08:54:21.3311620-03:00||;True|2024-09-17T08:48:43.5277207-03:00||;True|2024-09-17T08:46:35.4600645-03:00||;True|2024-09-17T08:42:30.2420555-03:00||;True|2024-09-16T23:03:14.0388371-03:00||;True|2024-09-16T23:00:28.5888282-03:00||;True|2024-09-16T22:54:16.4076202-03:00||;True|2024-09-16T22:46:40.1776978-03:00||;True|2024-09-16T22:44:17.7040724-03:00||;True|2024-09-16T22:37:45.7435389-03:00||;True|2024-09-16T22:34:46.2266003-03:00||;True|2024-09-16T22:31:57.3770223-03:00||;True|2024-09-16T22:28:04.3454168-03:00||;True|2024-09-16T22:25:09.6618563-03:00||;False|2024-09-16T22:24:38.5028349-03:00||;True|2024-09-16T22:03:42.9885603-03:00||;True|2024-09-16T21:58:31.2018708-03:00||;True|2024-09-16T21:56:15.8727760-03:00||;True|2024-09-16T21:46:44.1032240-03:00||;True|2024-09-16T21:37:49.9874654-03:00||;True|2024-09-16T21:10:50.7915659-03:00||;True|2024-09-16T20:58:38.1622031-03:00||;True|2024-09-16T20:40:48.4334271-03:00||;True|2024-09-16T20:35:41.3006258-03:00||;True|2024-09-16T20:33:07.0558657-03:00||;True|2024-09-16T20:31:46.3777298-03:00||;True|2024-09-16T20:27:14.3610573-03:00||;True|2024-09-16T20:21:21.0272757-03:00||;True|2024-09-16T19:54:53.0769550-03:00||;True|2024-09-16T17:51:29.0244883-03:00||;True|2024-09-16T17:46:36.5278378-03:00||;True|2024-09-16T17:43:59.8051471-03:00||;True|2024-09-12T17:15:05.4636741-03:00||;True|2024-09-12T15:32:08.5031801-03:00||;True|2024-09-12T10:07:57.0033316-03:00||;True|2024-09-12T08:39:56.1855329-03:00||;False|2024-09-12T08:39:07.2548475-03:00||;False|2024-09-12T08:38:59.9053628-03:00||;True|2024-09-11T16:45:24.4908539-03:00||;True|2024-09-11T15:57:19.1453286-03:00||;True|2024-09-11T15:54:05.1553258-03:00||;True|2024-09-11T15:51:13.8977269-03:00||;True|2024-09-11T15:47:23.4416093-03:00||;True|2024-09-11T15:17:24.8870265-03:00||;True|2024-09-11T15:09:50.8928292-03:00||;True|2024-09-11T14:46:01.6763187-03:00||;True|2024-09-11T14:36:05.8950857-03:00||;True|2024-09-11T10:54:37.7504376-03:00||;True|2024-09-11T10:32:26.0639562-03:00||;False|2024-09-11T10:31:39.7158992-03:00||;True|2024-09-10T22:28:43.0148137-03:00||;True|2024-09-10T11:46:25.0285884-03:00||;True|2024-09-10T11:16:53.6145529-03:00||;True|2024-09-10T11:06:23.0331443-03:00||;True|2024-09-10T11:02:15.1421914-03:00||;True|2024-09-10T10:58:13.3775783-03:00||;True|2024-09-10T07:50:45.8835562-03:00||;True|2024-09-08T23:07:20.2146956-03:00||;True|2024-09-07T11:42:18.7478525-03:00||;True|2024-09-07T11:06:11.9070991-03:00||;True|2024-09-06T15:36:06.5890689-03:00||;True|2024-09-06T15:32:28.2767821-03:00||;True|2024-09-06T15:28:15.6306548-03:00||;True|2024-09-06T15:25:48.7658707-03:00||;True|2024-09-06T15:22:46.8405871-03:00||;True|2024-09-06T15:21:43.4068623-03:00||;True|2024-09-06T15:14:24.7774832-03:00||;True|2024-09-06T15:01:50.9192435-03:00||;True|2024-09-06T14:52:31.6255397-03:00||;True|2024-09-06T11:19:26.1702438-03:00||;True|2024-09-06T08:42:43.8281060-03:00||;True|2024-09-05T18:21:26.7265946-03:00||;True|2024-09-05T17:18:46.8497406-03:00||;True|2024-09-05T17:04:05.0421989-03:00||;True|2024-09-05T17:02:59.2610623-03:00||;</History>
     <LastFailureDetails />
   </PropertyGroup>
   <ItemGroup>
+    <File Include="bin/Connect/ServiceNow/Models/MobileActionsRequestModel.vb">
+      <publishTime>09/04/2024 15:56:13</publishTime>
+    </File>
     <File Include="bin/Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll">
       <publishTime>09/05/2018 13:10:50</publishTime>
     </File>
@@ -160,22 +163,46 @@ https://go.microsoft.com/fwlink/?LinkID=208121.
       <publishTime>08/08/2018 09:18:16</publishTime>
     </File>
     <File Include="bin/WS_IControlIT.dll">
-      <publishTime>08/28/2024 17:18:47</publishTime>
+      <publishTime>09/17/2024 16:04:02</publishTime>
     </File>
     <File Include="bin/WS_IControlIT.pdb">
-      <publishTime>08/28/2024 17:18:47</publishTime>
+      <publishTime>09/17/2024 16:04:02</publishTime>
     </File>
     <File Include="bin/WS_IControlIT.xml">
-      <publishTime>08/28/2024 17:18:47</publishTime>
+      <publishTime>09/17/2024 16:04:02</publishTime>
+    </File>
+    <File Include="Connect/ServiceNow/Handlers/Handler.asmx">
+      <publishTime>09/16/2024 17:43:20</publishTime>
+    </File>
+    <File Include="Connect/ServiceNow/Handlers/MobileActionsHandler.asmx">
+      <publishTime>09/04/2024 16:29:16</publishTime>
+    </File>
+    <File Include="Connect/ServiceNow/Handlers/MobileActionsHandler.asmx.vb">
+      <publishTime>09/16/2024 21:34:19</publishTime>
+    </File>
+    <File Include="Connect/ServiceNow/Handlers/ProfileActionsHandler.asmx">
+      <publishTime>09/04/2024 16:34:36</publishTime>
+    </File>
+    <File Include="Connect/ServiceNow/Handlers/ProfileActionsHandler.asmx.vb">
+      <publishTime>09/17/2024 10:23:05</publishTime>
+    </File>
+    <File Include="Connect/ServiceNow/Models/MobileActionsRequestModel.vb">
+      <publishTime>09/05/2024 10:14:33</publishTime>
+    </File>
+    <File Include="Connect/ServiceNow/Models/ProfileActionsRequestModel.vb">
+      <publishTime>09/05/2024 10:14:41</publishTime>
+    </File>
+    <File Include="Connect/ServiceNow/Processors/ServiceProcessor.vb">
+      <publishTime>09/12/2024 08:39:45</publishTime>
     </File>
     <File Include="Default.aspx">
       <publishTime>08/20/2024 13:47:21</publishTime>
     </File>
     <File Include="Web.config">
-      <publishTime>08/28/2024 17:19:43</publishTime>
+      <publishTime>09/17/2024 14:29:58</publishTime>
     </File>
     <File Include="WebService1.asmx">
-      <publishTime>08/27/2024 14:31:07</publishTime>
+      <publishTime>01/01/0001 00:00:00</publishTime>
     </File>
     <File Include="WSAuditoria.asmx">
       <publishTime>08/20/2024 13:47:21</publishTime>
@@ -187,7 +214,7 @@ https://go.microsoft.com/fwlink/?LinkID=208121.
       <publishTime>08/27/2024 14:34:17</publishTime>
     </File>
     <File Include="WSChamado2.asmx">
-      <publishTime>08/27/2024 14:27:13</publishTime>
+      <publishTime>01/01/0001 00:00:00</publishTime>
     </File>
     <File Include="WSConsulta.asmx">
       <publishTime>08/20/2024 13:47:21</publishTime>

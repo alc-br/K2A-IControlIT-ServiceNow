@@ -32,13 +32,13 @@ Namespace WS_GUA_Chamado
     Partial Public Class WSChamado
         Inherits System.Web.Services.Protocols.SoapHttpClientProtocol
         
-        Private TodosChamadosOperationCompleted As System.Threading.SendOrPostCallback
-        
         Private ChamadoOperationCompleted As System.Threading.SendOrPostCallback
         
-        Private Ativo_ChamadoOperationCompleted As System.Threading.SendOrPostCallback
+        Private AtivoChamadoOperationCompleted As System.Threading.SendOrPostCallback
         
-        Private Ativo_RelacionamentoOperationCompleted As System.Threading.SendOrPostCallback
+        Private AtivoRelacionamentoOperationCompleted As System.Threading.SendOrPostCallback
+        
+        Private ChamadoAuxiliarOperationCompleted As System.Threading.SendOrPostCallback
         
         Private useDefaultCredentialsSetExplicitly As Boolean
         
@@ -79,78 +79,132 @@ Namespace WS_GUA_Chamado
         End Property
         
         '''<remarks/>
-        Public Event TodosChamadosCompleted As TodosChamadosCompletedEventHandler
-        
-        '''<remarks/>
         Public Event ChamadoCompleted As ChamadoCompletedEventHandler
         
         '''<remarks/>
-        Public Event Ativo_ChamadoCompleted As Ativo_ChamadoCompletedEventHandler
+        Public Event AtivoChamadoCompleted As AtivoChamadoCompletedEventHandler
         
         '''<remarks/>
-        Public Event Ativo_RelacionamentoCompleted As Ativo_RelacionamentoCompletedEventHandler
+        Public Event AtivoRelacionamentoCompleted As AtivoRelacionamentoCompletedEventHandler
         
         '''<remarks/>
-        <System.Web.Services.Protocols.SoapDocumentMethodAttribute("WSChamado/TodosChamados", RequestNamespace:="WSChamado", ResponseNamespace:="WSChamado", Use:=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle:=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)>  _
-        Public Function TodosChamados(ByVal pPConn_Banco As String, ByVal pRetorno As Boolean) As System.Data.DataSet
-            Dim results() As Object = Me.Invoke("TodosChamados", New Object() {pPConn_Banco, pRetorno})
-            Return CType(results(0),System.Data.DataSet)
-        End Function
-        
-        '''<remarks/>
-        Public Overloads Sub TodosChamadosAsync(ByVal pPConn_Banco As String, ByVal pRetorno As Boolean)
-            Me.TodosChamadosAsync(pPConn_Banco, pRetorno, Nothing)
-        End Sub
-        
-        '''<remarks/>
-        Public Overloads Sub TodosChamadosAsync(ByVal pPConn_Banco As String, ByVal pRetorno As Boolean, ByVal userState As Object)
-            If (Me.TodosChamadosOperationCompleted Is Nothing) Then
-                Me.TodosChamadosOperationCompleted = AddressOf Me.OnTodosChamadosOperationCompleted
-            End If
-            Me.InvokeAsync("TodosChamados", New Object() {pPConn_Banco, pRetorno}, Me.TodosChamadosOperationCompleted, userState)
-        End Sub
-        
-        Private Sub OnTodosChamadosOperationCompleted(ByVal arg As Object)
-            If (Not (Me.TodosChamadosCompletedEvent) Is Nothing) Then
-                Dim invokeArgs As System.Web.Services.Protocols.InvokeCompletedEventArgs = CType(arg,System.Web.Services.Protocols.InvokeCompletedEventArgs)
-                RaiseEvent TodosChamadosCompleted(Me, New TodosChamadosCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState))
-            End If
-        End Sub
+        Public Event ChamadoAuxiliarCompleted As ChamadoAuxiliarCompletedEventHandler
         
         '''<remarks/>
         <System.Web.Services.Protocols.SoapDocumentMethodAttribute("WSChamado/Chamado", RequestNamespace:="WSChamado", ResponseNamespace:="WSChamado", Use:=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle:=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)>  _
-        Public Function Chamado(ByVal pPConn_Banco As String, ByVal pPakage As String, ByVal pId_Chamado As Integer, ByVal pCorrelationId As String, ByVal pNumero_Solicitacao As String, ByVal pEstado As String, ByVal pComentarios As String, ByVal pAtribuido_Para As String, ByVal pTipo_Solicitacao As String, ByVal pTransactionID As String, ByVal pId_Consumidor As Integer, ByVal pId_Ativo As Integer, ByVal pId_Conglomerado As Integer, ByVal pId_Plano As Integer, ByVal pRetorno As Boolean) As System.Data.DataSet
-            Dim results() As Object = Me.Invoke("Chamado", New Object() {pPConn_Banco, pPakage, pId_Chamado, pCorrelationId, pNumero_Solicitacao, pEstado, pComentarios, pAtribuido_Para, pTipo_Solicitacao, pTransactionID, pId_Consumidor, pId_Ativo, pId_Conglomerado, pId_Plano, pRetorno})
+        Public Function Chamado( _
+                    ByVal pPConn_Banco As String,  _
+                    ByVal pPakage As String,  _
+                    ByVal pageNumber As Integer,  _
+                    ByVal pageSize As Integer,  _
+                    ByVal idChamado As Integer,  _
+                    ByVal requestNumber As String,  _
+                    ByVal workOrderNumber As String,  _
+                    ByVal estado As String,  _
+                    ByVal comentarios As String,  _
+                    ByVal atribuidoPara As String,  _
+                    ByVal tipoSolicitacao As String,  _
+                    ByVal transactionID As String,  _
+                    ByVal idConsumidor As Integer,  _
+                    ByVal idAtivo As Integer,  _
+                    ByVal idConglomerado As Integer,  _
+                    ByVal userName As String,  _
+                    ByVal userNumber As String,  _
+                    ByVal designationProduct As String,  _
+                    ByVal telecomProvider As String,  _
+                    ByVal framingPlan As String,  _
+                    ByVal migrationDevice As String,  _
+                    ByVal servicePack As String,  _
+                    ByVal newAreaCode As String,  _
+                    ByVal newUserNumber As String,  _
+                    ByVal newTelecomProvider As String,  _
+                    ByVal countryDateForRoaming As String,  _
+                    ByVal managerOrAdm As String,  _
+                    ByVal viewProfile As String,  _
+                    ByVal managerNumber As String,  _
+                    ByVal additionalInformation As String,  _
+                    ByVal name As String,  _
+                    ByVal pRetorno As Boolean) As System.Data.DataSet
+            Dim results() As Object = Me.Invoke("Chamado", New Object() {pPConn_Banco, pPakage, pageNumber, pageSize, idChamado, requestNumber, workOrderNumber, estado, comentarios, atribuidoPara, tipoSolicitacao, transactionID, idConsumidor, idAtivo, idConglomerado, userName, userNumber, designationProduct, telecomProvider, framingPlan, migrationDevice, servicePack, newAreaCode, newUserNumber, newTelecomProvider, countryDateForRoaming, managerOrAdm, viewProfile, managerNumber, additionalInformation, name, pRetorno})
             Return CType(results(0),System.Data.DataSet)
         End Function
         
         '''<remarks/>
-        Public Overloads Sub ChamadoAsync(ByVal pPConn_Banco As String, ByVal pPakage As String, ByVal pId_Chamado As Integer, ByVal pCorrelationId As String, ByVal pNumero_Solicitacao As String, ByVal pEstado As String, ByVal pComentarios As String, ByVal pAtribuido_Para As String, ByVal pTipo_Solicitacao As String, ByVal pTransactionID As String, ByVal pId_Consumidor As Integer, ByVal pId_Ativo As Integer, ByVal pId_Conglomerado As Integer, ByVal pId_Plano As Integer, ByVal pRetorno As Boolean)
-            Me.ChamadoAsync(pPConn_Banco, pPakage, pId_Chamado, pCorrelationId, pNumero_Solicitacao, pEstado, pComentarios, pAtribuido_Para, pTipo_Solicitacao, pTransactionID, pId_Consumidor, pId_Ativo, pId_Conglomerado, pId_Plano, pRetorno, Nothing)
+        Public Overloads Sub ChamadoAsync( _
+                    ByVal pPConn_Banco As String,  _
+                    ByVal pPakage As String,  _
+                    ByVal pageNumber As Integer,  _
+                    ByVal pageSize As Integer,  _
+                    ByVal idChamado As Integer,  _
+                    ByVal requestNumber As String,  _
+                    ByVal workOrderNumber As String,  _
+                    ByVal estado As String,  _
+                    ByVal comentarios As String,  _
+                    ByVal atribuidoPara As String,  _
+                    ByVal tipoSolicitacao As String,  _
+                    ByVal transactionID As String,  _
+                    ByVal idConsumidor As Integer,  _
+                    ByVal idAtivo As Integer,  _
+                    ByVal idConglomerado As Integer,  _
+                    ByVal userName As String,  _
+                    ByVal userNumber As String,  _
+                    ByVal designationProduct As String,  _
+                    ByVal telecomProvider As String,  _
+                    ByVal framingPlan As String,  _
+                    ByVal migrationDevice As String,  _
+                    ByVal servicePack As String,  _
+                    ByVal newAreaCode As String,  _
+                    ByVal newUserNumber As String,  _
+                    ByVal newTelecomProvider As String,  _
+                    ByVal countryDateForRoaming As String,  _
+                    ByVal managerOrAdm As String,  _
+                    ByVal viewProfile As String,  _
+                    ByVal managerNumber As String,  _
+                    ByVal additionalInformation As String,  _
+                    ByVal name As String,  _
+                    ByVal pRetorno As Boolean)
+            Me.ChamadoAsync(pPConn_Banco, pPakage, pageNumber, pageSize, idChamado, requestNumber, workOrderNumber, estado, comentarios, atribuidoPara, tipoSolicitacao, transactionID, idConsumidor, idAtivo, idConglomerado, userName, userNumber, designationProduct, telecomProvider, framingPlan, migrationDevice, servicePack, newAreaCode, newUserNumber, newTelecomProvider, countryDateForRoaming, managerOrAdm, viewProfile, managerNumber, additionalInformation, name, pRetorno, Nothing)
         End Sub
         
         '''<remarks/>
         Public Overloads Sub ChamadoAsync( _
                     ByVal pPConn_Banco As String,  _
                     ByVal pPakage As String,  _
-                    ByVal pId_Chamado As Integer,  _
-                    ByVal pCorrelationId As String,  _
-                    ByVal pNumero_Solicitacao As String,  _
-                    ByVal pEstado As String,  _
-                    ByVal pComentarios As String,  _
-                    ByVal pAtribuido_Para As String,  _
-                    ByVal pTipo_Solicitacao As String,  _
-                    ByVal pTransactionID As String,  _
-                    ByVal pId_Consumidor As Integer,  _
-                    ByVal pId_Ativo As Integer,  _
-                    ByVal pId_Conglomerado As Integer,  _
-                    ByVal pId_Plano As Integer,  _
+                    ByVal pageNumber As Integer,  _
+                    ByVal pageSize As Integer,  _
+                    ByVal idChamado As Integer,  _
+                    ByVal requestNumber As String,  _
+                    ByVal workOrderNumber As String,  _
+                    ByVal estado As String,  _
+                    ByVal comentarios As String,  _
+                    ByVal atribuidoPara As String,  _
+                    ByVal tipoSolicitacao As String,  _
+                    ByVal transactionID As String,  _
+                    ByVal idConsumidor As Integer,  _
+                    ByVal idAtivo As Integer,  _
+                    ByVal idConglomerado As Integer,  _
+                    ByVal userName As String,  _
+                    ByVal userNumber As String,  _
+                    ByVal designationProduct As String,  _
+                    ByVal telecomProvider As String,  _
+                    ByVal framingPlan As String,  _
+                    ByVal migrationDevice As String,  _
+                    ByVal servicePack As String,  _
+                    ByVal newAreaCode As String,  _
+                    ByVal newUserNumber As String,  _
+                    ByVal newTelecomProvider As String,  _
+                    ByVal countryDateForRoaming As String,  _
+                    ByVal managerOrAdm As String,  _
+                    ByVal viewProfile As String,  _
+                    ByVal managerNumber As String,  _
+                    ByVal additionalInformation As String,  _
+                    ByVal name As String,  _
                     ByVal pRetorno As Boolean,  _
                     ByVal userState As Object)
             If (Me.ChamadoOperationCompleted Is Nothing) Then
                 Me.ChamadoOperationCompleted = AddressOf Me.OnChamadoOperationCompleted
             End If
-            Me.InvokeAsync("Chamado", New Object() {pPConn_Banco, pPakage, pId_Chamado, pCorrelationId, pNumero_Solicitacao, pEstado, pComentarios, pAtribuido_Para, pTipo_Solicitacao, pTransactionID, pId_Consumidor, pId_Ativo, pId_Conglomerado, pId_Plano, pRetorno}, Me.ChamadoOperationCompleted, userState)
+            Me.InvokeAsync("Chamado", New Object() {pPConn_Banco, pPakage, pageNumber, pageSize, idChamado, requestNumber, workOrderNumber, estado, comentarios, atribuidoPara, tipoSolicitacao, transactionID, idConsumidor, idAtivo, idConglomerado, userName, userNumber, designationProduct, telecomProvider, framingPlan, migrationDevice, servicePack, newAreaCode, newUserNumber, newTelecomProvider, countryDateForRoaming, managerOrAdm, viewProfile, managerNumber, additionalInformation, name, pRetorno}, Me.ChamadoOperationCompleted, userState)
         End Sub
         
         Private Sub OnChamadoOperationCompleted(ByVal arg As Object)
@@ -161,56 +215,83 @@ Namespace WS_GUA_Chamado
         End Sub
         
         '''<remarks/>
-        <System.Web.Services.Protocols.SoapDocumentMethodAttribute("WSChamado/Ativo_Chamado", RequestNamespace:="WSChamado", ResponseNamespace:="WSChamado", Use:=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle:=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)>  _
-        Public Function Ativo_Chamado(ByVal pPConn_Banco As String, ByVal pPakage As String, ByVal pId_Ativo As Integer, ByVal pId_Ativo_Status As Integer, ByVal pNr_Ativo As String, ByVal pNewNr_Ativo As String, ByVal pNewAreaCode As String, ByVal pId_Conglomerado As Integer, ByVal pPlano_Contrato As String, ByVal pRetorno As Boolean) As System.Data.DataSet
-            Dim results() As Object = Me.Invoke("Ativo_Chamado", New Object() {pPConn_Banco, pPakage, pId_Ativo, pId_Ativo_Status, pNr_Ativo, pNewNr_Ativo, pNewAreaCode, pId_Conglomerado, pPlano_Contrato, pRetorno})
+        <System.Web.Services.Protocols.SoapDocumentMethodAttribute("WSChamado/AtivoChamado", RequestNamespace:="WSChamado", ResponseNamespace:="WSChamado", Use:=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle:=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)>  _
+        Public Function AtivoChamado(ByVal pPConn_Banco As String, ByVal pPakage As String, ByVal pId_Chamado As Integer, ByVal pId_Ativo As Integer, ByVal pNr_Ativo As String, ByVal pNewNr_Ativo As String, ByVal pNewAreaCode As String, ByVal pId_Conglomerado As Integer, ByVal pPlano_Contrato As String, ByVal pComentarios As String, ByVal pRetorno As Boolean) As System.Data.DataSet
+            Dim results() As Object = Me.Invoke("AtivoChamado", New Object() {pPConn_Banco, pPakage, pId_Chamado, pId_Ativo, pNr_Ativo, pNewNr_Ativo, pNewAreaCode, pId_Conglomerado, pPlano_Contrato, pComentarios, pRetorno})
             Return CType(results(0),System.Data.DataSet)
         End Function
         
         '''<remarks/>
-        Public Overloads Sub Ativo_ChamadoAsync(ByVal pPConn_Banco As String, ByVal pPakage As String, ByVal pId_Ativo As Integer, ByVal pId_Ativo_Status As Integer, ByVal pNr_Ativo As String, ByVal pNewNr_Ativo As String, ByVal pNewAreaCode As String, ByVal pId_Conglomerado As Integer, ByVal pPlano_Contrato As String, ByVal pRetorno As Boolean)
-            Me.Ativo_ChamadoAsync(pPConn_Banco, pPakage, pId_Ativo, pId_Ativo_Status, pNr_Ativo, pNewNr_Ativo, pNewAreaCode, pId_Conglomerado, pPlano_Contrato, pRetorno, Nothing)
+        Public Overloads Sub AtivoChamadoAsync(ByVal pPConn_Banco As String, ByVal pPakage As String, ByVal pId_Chamado As Integer, ByVal pId_Ativo As Integer, ByVal pNr_Ativo As String, ByVal pNewNr_Ativo As String, ByVal pNewAreaCode As String, ByVal pId_Conglomerado As Integer, ByVal pPlano_Contrato As String, ByVal pComentarios As String, ByVal pRetorno As Boolean)
+            Me.AtivoChamadoAsync(pPConn_Banco, pPakage, pId_Chamado, pId_Ativo, pNr_Ativo, pNewNr_Ativo, pNewAreaCode, pId_Conglomerado, pPlano_Contrato, pComentarios, pRetorno, Nothing)
         End Sub
         
         '''<remarks/>
-        Public Overloads Sub Ativo_ChamadoAsync(ByVal pPConn_Banco As String, ByVal pPakage As String, ByVal pId_Ativo As Integer, ByVal pId_Ativo_Status As Integer, ByVal pNr_Ativo As String, ByVal pNewNr_Ativo As String, ByVal pNewAreaCode As String, ByVal pId_Conglomerado As Integer, ByVal pPlano_Contrato As String, ByVal pRetorno As Boolean, ByVal userState As Object)
-            If (Me.Ativo_ChamadoOperationCompleted Is Nothing) Then
-                Me.Ativo_ChamadoOperationCompleted = AddressOf Me.OnAtivo_ChamadoOperationCompleted
+        Public Overloads Sub AtivoChamadoAsync(ByVal pPConn_Banco As String, ByVal pPakage As String, ByVal pId_Chamado As Integer, ByVal pId_Ativo As Integer, ByVal pNr_Ativo As String, ByVal pNewNr_Ativo As String, ByVal pNewAreaCode As String, ByVal pId_Conglomerado As Integer, ByVal pPlano_Contrato As String, ByVal pComentarios As String, ByVal pRetorno As Boolean, ByVal userState As Object)
+            If (Me.AtivoChamadoOperationCompleted Is Nothing) Then
+                Me.AtivoChamadoOperationCompleted = AddressOf Me.OnAtivoChamadoOperationCompleted
             End If
-            Me.InvokeAsync("Ativo_Chamado", New Object() {pPConn_Banco, pPakage, pId_Ativo, pId_Ativo_Status, pNr_Ativo, pNewNr_Ativo, pNewAreaCode, pId_Conglomerado, pPlano_Contrato, pRetorno}, Me.Ativo_ChamadoOperationCompleted, userState)
+            Me.InvokeAsync("AtivoChamado", New Object() {pPConn_Banco, pPakage, pId_Chamado, pId_Ativo, pNr_Ativo, pNewNr_Ativo, pNewAreaCode, pId_Conglomerado, pPlano_Contrato, pComentarios, pRetorno}, Me.AtivoChamadoOperationCompleted, userState)
         End Sub
         
-        Private Sub OnAtivo_ChamadoOperationCompleted(ByVal arg As Object)
-            If (Not (Me.Ativo_ChamadoCompletedEvent) Is Nothing) Then
+        Private Sub OnAtivoChamadoOperationCompleted(ByVal arg As Object)
+            If (Not (Me.AtivoChamadoCompletedEvent) Is Nothing) Then
                 Dim invokeArgs As System.Web.Services.Protocols.InvokeCompletedEventArgs = CType(arg,System.Web.Services.Protocols.InvokeCompletedEventArgs)
-                RaiseEvent Ativo_ChamadoCompleted(Me, New Ativo_ChamadoCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState))
+                RaiseEvent AtivoChamadoCompleted(Me, New AtivoChamadoCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState))
             End If
         End Sub
         
         '''<remarks/>
-        <System.Web.Services.Protocols.SoapDocumentMethodAttribute("WSChamado/Ativo_Relacionamento", RequestNamespace:="WSChamado", ResponseNamespace:="WSChamado", Use:=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle:=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)>  _
-        Public Function Ativo_Relacionamento(ByVal pPConn_Banco As String, ByVal pPakage As String, ByVal pId_Ativo As Integer, ByVal pId_Consumidor As Integer, ByVal pDt_Hr_Desativacao As Date, ByVal pRetorno As Boolean) As System.Data.DataSet
-            Dim results() As Object = Me.Invoke("Ativo_Relacionamento", New Object() {pPConn_Banco, pPakage, pId_Ativo, pId_Consumidor, pDt_Hr_Desativacao, pRetorno})
+        <System.Web.Services.Protocols.SoapDocumentMethodAttribute("WSChamado/AtivoRelacionamento", RequestNamespace:="WSChamado", ResponseNamespace:="WSChamado", Use:=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle:=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)>  _
+        Public Function AtivoRelacionamento(ByVal pPConn_Banco As String, ByVal pId_Chamado As Integer, ByVal pId_Ativo As Integer, ByVal pUserNumber As Integer, ByVal pPakage As String, ByVal pRetorno As Boolean) As System.Data.DataSet
+            Dim results() As Object = Me.Invoke("AtivoRelacionamento", New Object() {pPConn_Banco, pId_Chamado, pId_Ativo, pUserNumber, pPakage, pRetorno})
             Return CType(results(0),System.Data.DataSet)
         End Function
         
         '''<remarks/>
-        Public Overloads Sub Ativo_RelacionamentoAsync(ByVal pPConn_Banco As String, ByVal pPakage As String, ByVal pId_Ativo As Integer, ByVal pId_Consumidor As Integer, ByVal pDt_Hr_Desativacao As Date, ByVal pRetorno As Boolean)
-            Me.Ativo_RelacionamentoAsync(pPConn_Banco, pPakage, pId_Ativo, pId_Consumidor, pDt_Hr_Desativacao, pRetorno, Nothing)
+        Public Overloads Sub AtivoRelacionamentoAsync(ByVal pPConn_Banco As String, ByVal pId_Chamado As Integer, ByVal pId_Ativo As Integer, ByVal pUserNumber As Integer, ByVal pPakage As String, ByVal pRetorno As Boolean)
+            Me.AtivoRelacionamentoAsync(pPConn_Banco, pId_Chamado, pId_Ativo, pUserNumber, pPakage, pRetorno, Nothing)
         End Sub
         
         '''<remarks/>
-        Public Overloads Sub Ativo_RelacionamentoAsync(ByVal pPConn_Banco As String, ByVal pPakage As String, ByVal pId_Ativo As Integer, ByVal pId_Consumidor As Integer, ByVal pDt_Hr_Desativacao As Date, ByVal pRetorno As Boolean, ByVal userState As Object)
-            If (Me.Ativo_RelacionamentoOperationCompleted Is Nothing) Then
-                Me.Ativo_RelacionamentoOperationCompleted = AddressOf Me.OnAtivo_RelacionamentoOperationCompleted
+        Public Overloads Sub AtivoRelacionamentoAsync(ByVal pPConn_Banco As String, ByVal pId_Chamado As Integer, ByVal pId_Ativo As Integer, ByVal pUserNumber As Integer, ByVal pPakage As String, ByVal pRetorno As Boolean, ByVal userState As Object)
+            If (Me.AtivoRelacionamentoOperationCompleted Is Nothing) Then
+                Me.AtivoRelacionamentoOperationCompleted = AddressOf Me.OnAtivoRelacionamentoOperationCompleted
             End If
-            Me.InvokeAsync("Ativo_Relacionamento", New Object() {pPConn_Banco, pPakage, pId_Ativo, pId_Consumidor, pDt_Hr_Desativacao, pRetorno}, Me.Ativo_RelacionamentoOperationCompleted, userState)
+            Me.InvokeAsync("AtivoRelacionamento", New Object() {pPConn_Banco, pId_Chamado, pId_Ativo, pUserNumber, pPakage, pRetorno}, Me.AtivoRelacionamentoOperationCompleted, userState)
         End Sub
         
-        Private Sub OnAtivo_RelacionamentoOperationCompleted(ByVal arg As Object)
-            If (Not (Me.Ativo_RelacionamentoCompletedEvent) Is Nothing) Then
+        Private Sub OnAtivoRelacionamentoOperationCompleted(ByVal arg As Object)
+            If (Not (Me.AtivoRelacionamentoCompletedEvent) Is Nothing) Then
                 Dim invokeArgs As System.Web.Services.Protocols.InvokeCompletedEventArgs = CType(arg,System.Web.Services.Protocols.InvokeCompletedEventArgs)
-                RaiseEvent Ativo_RelacionamentoCompleted(Me, New Ativo_RelacionamentoCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState))
+                RaiseEvent AtivoRelacionamentoCompleted(Me, New AtivoRelacionamentoCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState))
+            End If
+        End Sub
+        
+        '''<remarks/>
+        <System.Web.Services.Protocols.SoapDocumentMethodAttribute("WSChamado/ChamadoAuxiliar", RequestNamespace:="WSChamado", ResponseNamespace:="WSChamado", Use:=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle:=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)>  _
+        Public Function ChamadoAuxiliar(ByVal pPConn_Banco As String, ByVal pAcao As String, ByVal id_Conglomerado As Integer, ByVal id_Ativo As Integer, ByVal pEmailDestino As String, ByVal pEmailCopia As String, ByVal id_Mail_Sender As Integer, ByVal pTextoAdicional As String, ByVal pAssuntoEmail As String, ByVal pRetorno As Boolean) As System.Data.DataSet
+            Dim results() As Object = Me.Invoke("ChamadoAuxiliar", New Object() {pPConn_Banco, pAcao, id_Conglomerado, id_Ativo, pEmailDestino, pEmailCopia, id_Mail_Sender, pTextoAdicional, pAssuntoEmail, pRetorno})
+            Return CType(results(0),System.Data.DataSet)
+        End Function
+        
+        '''<remarks/>
+        Public Overloads Sub ChamadoAuxiliarAsync(ByVal pPConn_Banco As String, ByVal pAcao As String, ByVal id_Conglomerado As Integer, ByVal id_Ativo As Integer, ByVal pEmailDestino As String, ByVal pEmailCopia As String, ByVal id_Mail_Sender As Integer, ByVal pTextoAdicional As String, ByVal pAssuntoEmail As String, ByVal pRetorno As Boolean)
+            Me.ChamadoAuxiliarAsync(pPConn_Banco, pAcao, id_Conglomerado, id_Ativo, pEmailDestino, pEmailCopia, id_Mail_Sender, pTextoAdicional, pAssuntoEmail, pRetorno, Nothing)
+        End Sub
+        
+        '''<remarks/>
+        Public Overloads Sub ChamadoAuxiliarAsync(ByVal pPConn_Banco As String, ByVal pAcao As String, ByVal id_Conglomerado As Integer, ByVal id_Ativo As Integer, ByVal pEmailDestino As String, ByVal pEmailCopia As String, ByVal id_Mail_Sender As Integer, ByVal pTextoAdicional As String, ByVal pAssuntoEmail As String, ByVal pRetorno As Boolean, ByVal userState As Object)
+            If (Me.ChamadoAuxiliarOperationCompleted Is Nothing) Then
+                Me.ChamadoAuxiliarOperationCompleted = AddressOf Me.OnChamadoAuxiliarOperationCompleted
+            End If
+            Me.InvokeAsync("ChamadoAuxiliar", New Object() {pPConn_Banco, pAcao, id_Conglomerado, id_Ativo, pEmailDestino, pEmailCopia, id_Mail_Sender, pTextoAdicional, pAssuntoEmail, pRetorno}, Me.ChamadoAuxiliarOperationCompleted, userState)
+        End Sub
+        
+        Private Sub OnChamadoAuxiliarOperationCompleted(ByVal arg As Object)
+            If (Not (Me.ChamadoAuxiliarCompletedEvent) Is Nothing) Then
+                Dim invokeArgs As System.Web.Services.Protocols.InvokeCompletedEventArgs = CType(arg,System.Web.Services.Protocols.InvokeCompletedEventArgs)
+                RaiseEvent ChamadoAuxiliarCompleted(Me, New ChamadoAuxiliarCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState))
             End If
         End Sub
         
@@ -231,33 +312,6 @@ Namespace WS_GUA_Chamado
             End If
             Return false
         End Function
-    End Class
-    
-    '''<remarks/>
-    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.4084.0")>  _
-    Public Delegate Sub TodosChamadosCompletedEventHandler(ByVal sender As Object, ByVal e As TodosChamadosCompletedEventArgs)
-    
-    '''<remarks/>
-    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.4084.0"),  _
-     System.Diagnostics.DebuggerStepThroughAttribute(),  _
-     System.ComponentModel.DesignerCategoryAttribute("code")>  _
-    Partial Public Class TodosChamadosCompletedEventArgs
-        Inherits System.ComponentModel.AsyncCompletedEventArgs
-        
-        Private results() As Object
-        
-        Friend Sub New(ByVal results() As Object, ByVal exception As System.Exception, ByVal cancelled As Boolean, ByVal userState As Object)
-            MyBase.New(exception, cancelled, userState)
-            Me.results = results
-        End Sub
-        
-        '''<remarks/>
-        Public ReadOnly Property Result() As System.Data.DataSet
-            Get
-                Me.RaiseExceptionIfNecessary
-                Return CType(Me.results(0),System.Data.DataSet)
-            End Get
-        End Property
     End Class
     
     '''<remarks/>
@@ -289,13 +343,13 @@ Namespace WS_GUA_Chamado
     
     '''<remarks/>
     <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.4084.0")>  _
-    Public Delegate Sub Ativo_ChamadoCompletedEventHandler(ByVal sender As Object, ByVal e As Ativo_ChamadoCompletedEventArgs)
+    Public Delegate Sub AtivoChamadoCompletedEventHandler(ByVal sender As Object, ByVal e As AtivoChamadoCompletedEventArgs)
     
     '''<remarks/>
     <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.4084.0"),  _
      System.Diagnostics.DebuggerStepThroughAttribute(),  _
      System.ComponentModel.DesignerCategoryAttribute("code")>  _
-    Partial Public Class Ativo_ChamadoCompletedEventArgs
+    Partial Public Class AtivoChamadoCompletedEventArgs
         Inherits System.ComponentModel.AsyncCompletedEventArgs
         
         Private results() As Object
@@ -316,13 +370,40 @@ Namespace WS_GUA_Chamado
     
     '''<remarks/>
     <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.4084.0")>  _
-    Public Delegate Sub Ativo_RelacionamentoCompletedEventHandler(ByVal sender As Object, ByVal e As Ativo_RelacionamentoCompletedEventArgs)
+    Public Delegate Sub AtivoRelacionamentoCompletedEventHandler(ByVal sender As Object, ByVal e As AtivoRelacionamentoCompletedEventArgs)
     
     '''<remarks/>
     <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.4084.0"),  _
      System.Diagnostics.DebuggerStepThroughAttribute(),  _
      System.ComponentModel.DesignerCategoryAttribute("code")>  _
-    Partial Public Class Ativo_RelacionamentoCompletedEventArgs
+    Partial Public Class AtivoRelacionamentoCompletedEventArgs
+        Inherits System.ComponentModel.AsyncCompletedEventArgs
+        
+        Private results() As Object
+        
+        Friend Sub New(ByVal results() As Object, ByVal exception As System.Exception, ByVal cancelled As Boolean, ByVal userState As Object)
+            MyBase.New(exception, cancelled, userState)
+            Me.results = results
+        End Sub
+        
+        '''<remarks/>
+        Public ReadOnly Property Result() As System.Data.DataSet
+            Get
+                Me.RaiseExceptionIfNecessary
+                Return CType(Me.results(0),System.Data.DataSet)
+            End Get
+        End Property
+    End Class
+    
+    '''<remarks/>
+    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.4084.0")>  _
+    Public Delegate Sub ChamadoAuxiliarCompletedEventHandler(ByVal sender As Object, ByVal e As ChamadoAuxiliarCompletedEventArgs)
+    
+    '''<remarks/>
+    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.4084.0"),  _
+     System.Diagnostics.DebuggerStepThroughAttribute(),  _
+     System.ComponentModel.DesignerCategoryAttribute("code")>  _
+    Partial Public Class ChamadoAuxiliarCompletedEventArgs
         Inherits System.ComponentModel.AsyncCompletedEventArgs
         
         Private results() As Object

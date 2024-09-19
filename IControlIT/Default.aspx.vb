@@ -666,7 +666,6 @@ Public Class _Default
                 Exit Sub
             End If
 
-            ScriptManager.RegisterStartupScript(Me, Me.GetType(), "alert", "alert('Conn_Banco: " & Session("Conn_Banco").ToString() & "');", True)
 
             '----- testa se é o primeiro acesso do usuário
             vdataSet = WS_Modulo.Validacao_Global(Session("Conn_Banco"),

@@ -2,45 +2,40 @@
 <wsdl:definitions xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:tns="WSChamado" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" targetNamespace="WSChamado" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
   <wsdl:types>
     <s:schema elementFormDefault="qualified" targetNamespace="WSChamado">
-      <s:element name="TodosChamados">
-        <s:complexType>
-          <s:sequence>
-            <s:element minOccurs="0" maxOccurs="1" name="pPConn_Banco" type="s:string" />
-            <s:element minOccurs="1" maxOccurs="1" name="pRetorno" type="s:boolean" />
-          </s:sequence>
-        </s:complexType>
-      </s:element>
-      <s:element name="TodosChamadosResponse">
-        <s:complexType>
-          <s:sequence>
-            <s:element minOccurs="0" maxOccurs="1" name="TodosChamadosResult">
-              <s:complexType>
-                <s:sequence>
-                  <s:element ref="s:schema" />
-                  <s:any />
-                </s:sequence>
-              </s:complexType>
-            </s:element>
-          </s:sequence>
-        </s:complexType>
-      </s:element>
       <s:element name="Chamado">
         <s:complexType>
           <s:sequence>
             <s:element minOccurs="0" maxOccurs="1" name="pPConn_Banco" type="s:string" />
             <s:element minOccurs="0" maxOccurs="1" name="pPakage" type="s:string" />
-            <s:element minOccurs="1" maxOccurs="1" name="pId_Chamado" type="s:int" />
-            <s:element minOccurs="0" maxOccurs="1" name="pCorrelationId" type="s:string" />
-            <s:element minOccurs="0" maxOccurs="1" name="pNumero_Solicitacao" type="s:string" />
-            <s:element minOccurs="0" maxOccurs="1" name="pEstado" type="s:string" />
-            <s:element minOccurs="0" maxOccurs="1" name="pComentarios" type="s:string" />
-            <s:element minOccurs="0" maxOccurs="1" name="pAtribuido_Para" type="s:string" />
-            <s:element minOccurs="0" maxOccurs="1" name="pTipo_Solicitacao" type="s:string" />
-            <s:element minOccurs="0" maxOccurs="1" name="pTransactionID" type="s:string" />
-            <s:element minOccurs="1" maxOccurs="1" name="pId_Consumidor" type="s:int" />
-            <s:element minOccurs="1" maxOccurs="1" name="pId_Ativo" type="s:int" />
-            <s:element minOccurs="1" maxOccurs="1" name="pId_Conglomerado" type="s:int" />
-            <s:element minOccurs="1" maxOccurs="1" name="pId_Plano" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="pageNumber" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="pageSize" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="idChamado" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="requestNumber" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="workOrderNumber" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="estado" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="comentarios" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="atribuidoPara" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="tipoSolicitacao" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="transactionID" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="idConsumidor" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="idAtivo" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="idConglomerado" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="userName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="userNumber" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="designationProduct" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="telecomProvider" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="framingPlan" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="migrationDevice" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="servicePack" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="newAreaCode" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="newUserNumber" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="newTelecomProvider" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="countryDateForRoaming" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="managerOrAdm" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="viewProfile" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="managerNumber" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="additionalInformation" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="name" type="s:string" />
             <s:element minOccurs="1" maxOccurs="1" name="pRetorno" type="s:boolean" />
           </s:sequence>
         </s:complexType>
@@ -59,26 +54,27 @@
           </s:sequence>
         </s:complexType>
       </s:element>
-      <s:element name="Ativo_Chamado">
+      <s:element name="AtivoChamado">
         <s:complexType>
           <s:sequence>
             <s:element minOccurs="0" maxOccurs="1" name="pPConn_Banco" type="s:string" />
             <s:element minOccurs="0" maxOccurs="1" name="pPakage" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="pId_Chamado" type="s:int" />
             <s:element minOccurs="1" maxOccurs="1" name="pId_Ativo" type="s:int" />
-            <s:element minOccurs="1" maxOccurs="1" name="pId_Ativo_Status" type="s:int" />
             <s:element minOccurs="0" maxOccurs="1" name="pNr_Ativo" type="s:string" />
             <s:element minOccurs="0" maxOccurs="1" name="pNewNr_Ativo" type="s:string" />
             <s:element minOccurs="0" maxOccurs="1" name="pNewAreaCode" type="s:string" />
             <s:element minOccurs="1" maxOccurs="1" name="pId_Conglomerado" type="s:int" />
             <s:element minOccurs="0" maxOccurs="1" name="pPlano_Contrato" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pComentarios" type="s:string" />
             <s:element minOccurs="1" maxOccurs="1" name="pRetorno" type="s:boolean" />
           </s:sequence>
         </s:complexType>
       </s:element>
-      <s:element name="Ativo_ChamadoResponse">
+      <s:element name="AtivoChamadoResponse">
         <s:complexType>
           <s:sequence>
-            <s:element minOccurs="0" maxOccurs="1" name="Ativo_ChamadoResult">
+            <s:element minOccurs="0" maxOccurs="1" name="AtivoChamadoResult">
               <s:complexType>
                 <s:sequence>
                   <s:element ref="s:schema" />
@@ -89,22 +85,52 @@
           </s:sequence>
         </s:complexType>
       </s:element>
-      <s:element name="Ativo_Relacionamento">
+      <s:element name="AtivoRelacionamento">
         <s:complexType>
           <s:sequence>
             <s:element minOccurs="0" maxOccurs="1" name="pPConn_Banco" type="s:string" />
-            <s:element minOccurs="0" maxOccurs="1" name="pPakage" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="pId_Chamado" type="s:int" />
             <s:element minOccurs="1" maxOccurs="1" name="pId_Ativo" type="s:int" />
-            <s:element minOccurs="1" maxOccurs="1" name="pId_Consumidor" type="s:int" />
-            <s:element minOccurs="1" maxOccurs="1" name="pDt_Hr_Desativacao" type="s:dateTime" />
+            <s:element minOccurs="1" maxOccurs="1" name="pUserNumber" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="pPakage" type="s:string" />
             <s:element minOccurs="1" maxOccurs="1" name="pRetorno" type="s:boolean" />
           </s:sequence>
         </s:complexType>
       </s:element>
-      <s:element name="Ativo_RelacionamentoResponse">
+      <s:element name="AtivoRelacionamentoResponse">
         <s:complexType>
           <s:sequence>
-            <s:element minOccurs="0" maxOccurs="1" name="Ativo_RelacionamentoResult">
+            <s:element minOccurs="0" maxOccurs="1" name="AtivoRelacionamentoResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ChamadoAuxiliar">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="pPConn_Banco" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pAcao" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="id_Conglomerado" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="id_Ativo" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="pEmailDestino" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pEmailCopia" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="id_Mail_Sender" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="pTextoAdicional" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pAssuntoEmail" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="pRetorno" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ChamadoAuxiliarResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ChamadoAuxiliarResult">
               <s:complexType>
                 <s:sequence>
                   <s:element ref="s:schema" />
@@ -117,59 +143,50 @@
       </s:element>
     </s:schema>
   </wsdl:types>
-  <wsdl:message name="TodosChamadosSoapIn">
-    <wsdl:part name="parameters" element="tns:TodosChamados" />
-  </wsdl:message>
-  <wsdl:message name="TodosChamadosSoapOut">
-    <wsdl:part name="parameters" element="tns:TodosChamadosResponse" />
-  </wsdl:message>
   <wsdl:message name="ChamadoSoapIn">
     <wsdl:part name="parameters" element="tns:Chamado" />
   </wsdl:message>
   <wsdl:message name="ChamadoSoapOut">
     <wsdl:part name="parameters" element="tns:ChamadoResponse" />
   </wsdl:message>
-  <wsdl:message name="Ativo_ChamadoSoapIn">
-    <wsdl:part name="parameters" element="tns:Ativo_Chamado" />
+  <wsdl:message name="AtivoChamadoSoapIn">
+    <wsdl:part name="parameters" element="tns:AtivoChamado" />
   </wsdl:message>
-  <wsdl:message name="Ativo_ChamadoSoapOut">
-    <wsdl:part name="parameters" element="tns:Ativo_ChamadoResponse" />
+  <wsdl:message name="AtivoChamadoSoapOut">
+    <wsdl:part name="parameters" element="tns:AtivoChamadoResponse" />
   </wsdl:message>
-  <wsdl:message name="Ativo_RelacionamentoSoapIn">
-    <wsdl:part name="parameters" element="tns:Ativo_Relacionamento" />
+  <wsdl:message name="AtivoRelacionamentoSoapIn">
+    <wsdl:part name="parameters" element="tns:AtivoRelacionamento" />
   </wsdl:message>
-  <wsdl:message name="Ativo_RelacionamentoSoapOut">
-    <wsdl:part name="parameters" element="tns:Ativo_RelacionamentoResponse" />
+  <wsdl:message name="AtivoRelacionamentoSoapOut">
+    <wsdl:part name="parameters" element="tns:AtivoRelacionamentoResponse" />
+  </wsdl:message>
+  <wsdl:message name="ChamadoAuxiliarSoapIn">
+    <wsdl:part name="parameters" element="tns:ChamadoAuxiliar" />
+  </wsdl:message>
+  <wsdl:message name="ChamadoAuxiliarSoapOut">
+    <wsdl:part name="parameters" element="tns:ChamadoAuxiliarResponse" />
   </wsdl:message>
   <wsdl:portType name="WSChamadoSoap">
-    <wsdl:operation name="TodosChamados">
-      <wsdl:input message="tns:TodosChamadosSoapIn" />
-      <wsdl:output message="tns:TodosChamadosSoapOut" />
-    </wsdl:operation>
     <wsdl:operation name="Chamado">
       <wsdl:input message="tns:ChamadoSoapIn" />
       <wsdl:output message="tns:ChamadoSoapOut" />
     </wsdl:operation>
-    <wsdl:operation name="Ativo_Chamado">
-      <wsdl:input message="tns:Ativo_ChamadoSoapIn" />
-      <wsdl:output message="tns:Ativo_ChamadoSoapOut" />
+    <wsdl:operation name="AtivoChamado">
+      <wsdl:input message="tns:AtivoChamadoSoapIn" />
+      <wsdl:output message="tns:AtivoChamadoSoapOut" />
     </wsdl:operation>
-    <wsdl:operation name="Ativo_Relacionamento">
-      <wsdl:input message="tns:Ativo_RelacionamentoSoapIn" />
-      <wsdl:output message="tns:Ativo_RelacionamentoSoapOut" />
+    <wsdl:operation name="AtivoRelacionamento">
+      <wsdl:input message="tns:AtivoRelacionamentoSoapIn" />
+      <wsdl:output message="tns:AtivoRelacionamentoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ChamadoAuxiliar">
+      <wsdl:input message="tns:ChamadoAuxiliarSoapIn" />
+      <wsdl:output message="tns:ChamadoAuxiliarSoapOut" />
     </wsdl:operation>
   </wsdl:portType>
   <wsdl:binding name="WSChamadoSoap" type="tns:WSChamadoSoap">
     <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
-    <wsdl:operation name="TodosChamados">
-      <soap:operation soapAction="WSChamado/TodosChamados" style="document" />
-      <wsdl:input>
-        <soap:body use="literal" />
-      </wsdl:input>
-      <wsdl:output>
-        <soap:body use="literal" />
-      </wsdl:output>
-    </wsdl:operation>
     <wsdl:operation name="Chamado">
       <soap:operation soapAction="WSChamado/Chamado" style="document" />
       <wsdl:input>
@@ -179,8 +196,8 @@
         <soap:body use="literal" />
       </wsdl:output>
     </wsdl:operation>
-    <wsdl:operation name="Ativo_Chamado">
-      <soap:operation soapAction="WSChamado/Ativo_Chamado" style="document" />
+    <wsdl:operation name="AtivoChamado">
+      <soap:operation soapAction="WSChamado/AtivoChamado" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>
@@ -188,8 +205,17 @@
         <soap:body use="literal" />
       </wsdl:output>
     </wsdl:operation>
-    <wsdl:operation name="Ativo_Relacionamento">
-      <soap:operation soapAction="WSChamado/Ativo_Relacionamento" style="document" />
+    <wsdl:operation name="AtivoRelacionamento">
+      <soap:operation soapAction="WSChamado/AtivoRelacionamento" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ChamadoAuxiliar">
+      <soap:operation soapAction="WSChamado/ChamadoAuxiliar" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>
@@ -200,15 +226,6 @@
   </wsdl:binding>
   <wsdl:binding name="WSChamadoSoap12" type="tns:WSChamadoSoap">
     <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
-    <wsdl:operation name="TodosChamados">
-      <soap12:operation soapAction="WSChamado/TodosChamados" style="document" />
-      <wsdl:input>
-        <soap12:body use="literal" />
-      </wsdl:input>
-      <wsdl:output>
-        <soap12:body use="literal" />
-      </wsdl:output>
-    </wsdl:operation>
     <wsdl:operation name="Chamado">
       <soap12:operation soapAction="WSChamado/Chamado" style="document" />
       <wsdl:input>
@@ -218,8 +235,8 @@
         <soap12:body use="literal" />
       </wsdl:output>
     </wsdl:operation>
-    <wsdl:operation name="Ativo_Chamado">
-      <soap12:operation soapAction="WSChamado/Ativo_Chamado" style="document" />
+    <wsdl:operation name="AtivoChamado">
+      <soap12:operation soapAction="WSChamado/AtivoChamado" style="document" />
       <wsdl:input>
         <soap12:body use="literal" />
       </wsdl:input>
@@ -227,8 +244,17 @@
         <soap12:body use="literal" />
       </wsdl:output>
     </wsdl:operation>
-    <wsdl:operation name="Ativo_Relacionamento">
-      <soap12:operation soapAction="WSChamado/Ativo_Relacionamento" style="document" />
+    <wsdl:operation name="AtivoRelacionamento">
+      <soap12:operation soapAction="WSChamado/AtivoRelacionamento" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ChamadoAuxiliar">
+      <soap12:operation soapAction="WSChamado/ChamadoAuxiliar" style="document" />
       <wsdl:input>
         <soap12:body use="literal" />
       </wsdl:input>

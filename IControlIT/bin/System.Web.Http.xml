@@ -6475,4 +6475,190 @@
       <returns>true if the collection contains the specified prefix; otherwise, false.</returns>
       <param name="prefix">The prefix to search for.</param>
     </member>
-    <member name="M:System.Web.Http.ValueProviders.IV                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         
+    <member name="M:System.Web.Http.ValueProviders.IValueProvider.GetValue(System.String)">
+      <summary>Retrieves a value object using the specified key.</summary>
+      <returns>The value object for the specified key, or null if the key is not found.</returns>
+      <param name="key">The key of the value object to retrieve.</param>
+    </member>
+    <member name="T:System.Web.Http.ValueProviders.ValueProviderAttribute">
+      <summary> This attribute is used to specify a custom <see cref="T:System.Web.Http.ValueProviders.ValueProviderFactory" />. </summary>
+    </member>
+    <member name="M:System.Web.Http.ValueProviders.ValueProviderAttribute.#ctor(System.Type)">
+      <summary>Initializes a new instance of the <see cref="T:System.Web.Http.ValueProviders.ValueProviderAttribute" />.</summary>
+      <param name="valueProviderFactory">The type of the model binder.</param>
+    </member>
+    <member name="M:System.Web.Http.ValueProviders.ValueProviderAttribute.#ctor(System.Type[])">
+      <summary>Initializes a new instance of the <see cref="T:System.Web.Http.ValueProviders.ValueProviderAttribute" />.</summary>
+      <param name="valueProviderFactories">An array of model binder types.</param>
+    </member>
+    <member name="M:System.Web.Http.ValueProviders.ValueProviderAttribute.GetValueProviderFactories(System.Web.Http.HttpConfiguration)">
+      <summary>Gets the value provider factories.</summary>
+      <returns>A collection of value provider factories.</returns>
+      <param name="configuration">A configuration object.</param>
+    </member>
+    <member name="P:System.Web.Http.ValueProviders.ValueProviderAttribute.ValueProviderFactoryTypes">
+      <summary>Gets the types of object returned by the value provider factory.</summary>
+      <returns>A collection of types.</returns>
+    </member>
+    <member name="T:System.Web.Http.ValueProviders.ValueProviderFactory">
+      <summary>Represents a factory for creating value-provider objects.</summary>
+    </member>
+    <member name="M:System.Web.Http.ValueProviders.ValueProviderFactory.#ctor">
+      <summary>Initializes a new instance of the <see cref="T:System.Web.Http.ValueProviders.ValueProviderFactory" /> class.</summary>
+    </member>
+    <member name="M:System.Web.Http.ValueProviders.ValueProviderFactory.GetValueProvider(System.Web.Http.Controllers.HttpActionContext)">
+      <summary>Returns a value-provider object for the specified controller context.</summary>
+      <returns>A value-provider object.</returns>
+      <param name="actionContext">An object that encapsulates information about the current HTTP request.</param>
+    </member>
+    <member name="T:System.Web.Http.ValueProviders.ValueProviderResult">
+      <summary>Represents the result of binding a value (such as from a form post or query string) to an action-method argument property, or to the argument itself.</summary>
+    </member>
+    <member name="M:System.Web.Http.ValueProviders.ValueProviderResult.#ctor">
+      <summary>Initializes a new instance of the <see cref="T:System.Web.Http.ValueProviders.ValueProviderResult" /> class.</summary>
+    </member>
+    <member name="M:System.Web.Http.ValueProviders.ValueProviderResult.#ctor(System.Object,System.String,System.Globalization.CultureInfo)">
+      <summary>Initializes a new instance of the <see cref="T:System.Web.Http.ValueProviders.ValueProviderResult" /> class.</summary>
+      <param name="rawValue">The raw value.</param>
+      <param name="attemptedValue">The attempted value.</param>
+      <param name="culture">The culture.</param>
+    </member>
+    <member name="P:System.Web.Http.ValueProviders.ValueProviderResult.AttemptedValue">
+      <summary>Gets or sets the raw value that is converted to a string for display.</summary>
+      <returns>The raw value that is converted to a string for display.</returns>
+    </member>
+    <member name="M:System.Web.Http.ValueProviders.ValueProviderResult.ConvertTo(System.Type)">
+      <summary>Converts the value that is encapsulated by this result to the specified type.</summary>
+      <returns>The converted value.</returns>
+      <param name="type">The target type.</param>
+    </member>
+    <member name="M:System.Web.Http.ValueProviders.ValueProviderResult.ConvertTo(System.Type,System.Globalization.CultureInfo)">
+      <summary>Converts the value that is encapsulated by this result to the specified type by using the specified culture information.</summary>
+      <returns>The converted value.</returns>
+      <param name="type">The target type.</param>
+      <param name="culture">The culture to use in the conversion.</param>
+    </member>
+    <member name="P:System.Web.Http.ValueProviders.ValueProviderResult.Culture">
+      <summary>Gets or sets the culture.</summary>
+      <returns>The culture.</returns>
+    </member>
+    <member name="P:System.Web.Http.ValueProviders.ValueProviderResult.RawValue">
+      <summary>Gets or set the raw value that is supplied by the value provider.</summary>
+      <returns>The raw value that is supplied by the value provider.</returns>
+    </member>
+    <member name="T:System.Web.Http.ValueProviders.Providers.CompositeValueProvider">
+      <summary>Represents a value provider whose values come from a list of value providers that implements the <see cref="T:System.Collections.IEnumerable" /> interface.</summary>
+    </member>
+    <member name="M:System.Web.Http.ValueProviders.Providers.CompositeValueProvider.#ctor">
+      <summary>Initializes a new instance of the <see cref="T:System.Web.Http.ValueProviders.Providers.CompositeValueProvider" /> class.</summary>
+    </member>
+    <member name="M:System.Web.Http.ValueProviders.Providers.CompositeValueProvider.#ctor(System.Collections.Generic.IList{System.Web.Http.ValueProviders.IValueProvider})">
+      <summary>Initializes a new instance of the <see cref="T:System.Web.Http.ValueProviders.Providers.CompositeValueProvider" /> class.</summary>
+      <param name="list">The list of value providers.</param>
+    </member>
+    <member name="M:System.Web.Http.ValueProviders.Providers.CompositeValueProvider.ContainsPrefix(System.String)">
+      <summary>Determines whether the collection contains the specified <paramref name="prefix" />.</summary>
+      <returns>true if the collection contains the specified <paramref name="prefix" />; otherwise, false.</returns>
+      <param name="prefix">The prefix to search for.</param>
+    </member>
+    <member name="M:System.Web.Http.ValueProviders.Providers.CompositeValueProvider.GetKeysFromPrefix(System.String)">
+      <summary>Retrieves the keys from the specified <paramref name="prefix" />.</summary>
+      <returns>The keys from the specified <paramref name="prefix" />.</returns>
+      <param name="prefix">The prefix from which keys are retrieved.</param>
+    </member>
+    <member name="M:System.Web.Http.ValueProviders.Providers.CompositeValueProvider.GetValue(System.String)">
+      <summary>Retrieves a value object using the specified <paramref name="key" />.</summary>
+      <returns>The value object for the specified <paramref name="key" />.</returns>
+      <param name="key">The key of the value object to retrieve.</param>
+    </member>
+    <member name="M:System.Web.Http.ValueProviders.Providers.CompositeValueProvider.InsertItem(System.Int32,System.Web.Http.ValueProviders.IValueProvider)">
+      <summary>Inserts an element into the collection at the specified index.</summary>
+      <param name="index">The zero-based index at which <paramref name="item" /> should be inserted.</param>
+      <param name="item">The object to insert.</param>
+    </member>
+    <member name="M:System.Web.Http.ValueProviders.Providers.CompositeValueProvider.SetItem(System.Int32,System.Web.Http.ValueProviders.IValueProvider)">
+      <summary>Replaces the element at the specified index.</summary>
+      <param name="index">The zero-based index of the element to replace.</param>
+      <param name="item">The new value for the element at the specified index.</param>
+    </member>
+    <member name="T:System.Web.Http.ValueProviders.Providers.CompositeValueProviderFactory">
+      <summary>Represents a factory for creating a list of value-provider objects.</summary>
+    </member>
+    <member name="M:System.Web.Http.ValueProviders.Providers.CompositeValueProviderFactory.#ctor(System.Collections.Generic.IEnumerable{System.Web.Http.ValueProviders.ValueProviderFactory})">
+      <summary>Initializes a new instance of the <see cref="T:System.Web.Http.ValueProviders.Providers.CompositeValueProviderFactory" /> class.</summary>
+      <param name="factories">The collection of value-provider factories.</param>
+    </member>
+    <member name="M:System.Web.Http.ValueProviders.Providers.CompositeValueProviderFactory.GetValueProvider(System.Web.Http.Controllers.HttpActionContext)">
+      <summary>Retrieves a list of value-provider objects for the specified controller context.</summary>
+      <returns>The list of value-provider objects for the specified controller context.</returns>
+      <param name="actionContext">An object that encapsulates information about the current HTTP request.</param>
+    </member>
+    <member name="T:System.Web.Http.ValueProviders.Providers.NameValuePairsValueProvider">
+      <summary>A value provider for name/value pairs.</summary>
+    </member>
+    <member name="M:System.Web.Http.ValueProviders.Providers.NameValuePairsValueProvider.#ctor(System.Collections.Generic.IDictionary{System.String,System.Object},System.Globalization.CultureInfo)"></member>
+    <member name="M:System.Web.Http.ValueProviders.Providers.NameValuePairsValueProvider.#ctor(System.Collections.Generic.IEnumerable{System.Collections.Generic.KeyValuePair{System.String,System.String}},System.Globalization.CultureInfo)">
+      <summary>Initializes a new instance of the <see cref="T:System.Web.Http.ValueProviders.Providers.NameValuePairsValueProvider" /> class.</summary>
+      <param name="values">The name/value pairs for the provider.</param>
+      <param name="culture">The culture used for the name/value pairs.</param>
+    </member>
+    <member name="M:System.Web.Http.ValueProviders.Providers.NameValuePairsValueProvider.#ctor(System.Func{System.Collections.Generic.IEnumerable{System.Collections.Generic.KeyValuePair{System.String,System.String}}},System.Globalization.CultureInfo)">
+      <summary>Initializes a new instance of the <see cref="T:System.Web.Http.ValueProviders.Providers.NameValuePairsValueProvider" /> class, using a function delegate to provide the name/value pairs.</summary>
+      <param name="valuesFactory">A function delegate that returns a collection of name/value pairs.</param>
+      <param name="culture">The culture used for the name/value pairs.</param>
+    </member>
+    <member name="M:System.Web.Http.ValueProviders.Providers.NameValuePairsValueProvider.ContainsPrefix(System.String)">
+      <summary>Determines whether the collection contains the specified prefix.</summary>
+      <returns>true if the collection contains the specified prefix; otherwise, false.</returns>
+      <param name="prefix">The prefix to search for.</param>
+    </member>
+    <member name="M:System.Web.Http.ValueProviders.Providers.NameValuePairsValueProvider.GetKeysFromPrefix(System.String)">
+      <summary>Gets the keys from a prefix.</summary>
+      <returns>The keys.</returns>
+      <param name="prefix">The prefix.</param>
+    </member>
+    <member name="M:System.Web.Http.ValueProviders.Providers.NameValuePairsValueProvider.GetValue(System.String)">
+      <summary>Retrieves a value object using the specified key.</summary>
+      <returns>The value object for the specified key.</returns>
+      <param name="key">The key of the value object to retrieve.</param>
+    </member>
+    <member name="T:System.Web.Http.ValueProviders.Providers.QueryStringValueProvider">
+      <summary>Represents a value provider for query strings that are contained in a <see cref="T:System.Collections.Specialized.NameValueCollection" /> object.</summary>
+    </member>
+    <member name="M:System.Web.Http.ValueProviders.Providers.QueryStringValueProvider.#ctor(System.Web.Http.Controllers.HttpActionContext,System.Globalization.CultureInfo)">
+      <summary>Initializes a new instance of the <see cref="T:System.Web.Http.ValueProviders.Providers.QueryStringValueProvider" /> class.</summary>
+      <param name="actionContext">An object that encapsulates information about the current HTTP request.</param>
+      <param name="culture">An object that contains information about the target culture.</param>
+    </member>
+    <member name="T:System.Web.Http.ValueProviders.Providers.QueryStringValueProviderFactory">
+      <summary>Represents a class that is responsible for creating a new instance of a query-string value-provider object.</summary>
+    </member>
+    <member name="M:System.Web.Http.ValueProviders.Providers.QueryStringValueProviderFactory.#ctor">
+      <summary>Initializes a new instance of the <see cref="T:System.Web.Http.ValueProviders.Providers.QueryStringValueProviderFactory" /> class.</summary>
+    </member>
+    <member name="M:System.Web.Http.ValueProviders.Providers.QueryStringValueProviderFactory.GetValueProvider(System.Web.Http.Controllers.HttpActionContext)">
+      <summary>Retrieves a value-provider object for the specified controller context.</summary>
+      <returns>A query-string value-provider object.</returns>
+      <param name="actionContext">An object that encapsulates information about the current HTTP request.</param>
+    </member>
+    <member name="T:System.Web.Http.ValueProviders.Providers.RouteDataValueProvider">
+      <summary>Represents a value provider for route data that is contained in an object that implements the IDictionary(Of TKey, TValue) interface.</summary>
+    </member>
+    <member name="M:System.Web.Http.ValueProviders.Providers.RouteDataValueProvider.#ctor(System.Web.Http.Controllers.HttpActionContext,System.Globalization.CultureInfo)">
+      <summary>Initializes a new instance of the <see cref="T:System.Web.Http.ValueProviders.Providers.RouteDataValueProvider" /> class.</summary>
+      <param name="actionContext">An object that contain information about the HTTP request.</param>
+      <param name="culture">An object that contains information about the target culture.</param>
+    </member>
+    <member name="T:System.Web.Http.ValueProviders.Providers.RouteDataValueProviderFactory">
+      <summary>Represents a factory for creating route-data value provider objects.</summary>
+    </member>
+    <member name="M:System.Web.Http.ValueProviders.Providers.RouteDataValueProviderFactory.#ctor">
+      <summary>Initializes a new instance of the <see cref="T:System.Web.Http.ValueProviders.Providers.RouteDataValueProviderFactory" /> class.</summary>
+    </member>
+    <member name="M:System.Web.Http.ValueProviders.Providers.RouteDataValueProviderFactory.GetValueProvider(System.Web.Http.Controllers.HttpActionContext)">
+      <summary>Retrieves a value-provider object for the specified controller context.</summary>
+      <returns>A value-provider object.</returns>
+      <param name="actionContext">An object that encapsulates information about the current HTTP request.</param>
+    </member>
+  </members>
+</doc>
